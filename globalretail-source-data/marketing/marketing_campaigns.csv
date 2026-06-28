@@ -1,0 +1,1001 @@
+CampaignID,CampaignName,Channel,Budget
+M0001,Summer Sale 1,Social,176413
+M0002,Flash Sale 2,Email,109458
+M0003,Holiday 3,Social,69637
+M0004,Holiday 4,Affiliate,163049
+M0005,Black Friday 5,Email,136530
+M0006,Flash Sale 6,Email,100117
+M0007,Black Friday 7,Search,131111
+M0008,Flash Sale 8,Email,115931
+M0009,Holiday 9,Social,53014
+M0010,Flash Sale 10,Search,91241
+M0011,Flash Sale 11,Social,76364
+M0012,Spring Deals 12,Social,125924
+M0013,Black Friday 13,Search,125804
+M0014,Spring Deals 14,Social,149975
+M0015,Spring Deals 15,Affiliate,26486
+M0016,Flash Sale 16,Affiliate,59946
+M0017,Holiday 17,Affiliate,192568
+M0018,Black Friday 18,Affiliate,178807
+M0019,Summer Sale 19,Search,148716
+M0020,Spring Deals 20,Email,65944
+M0021,Holiday 21,Social,138934
+M0022,Holiday 22,Social,77260
+M0023,Summer Sale 23,Affiliate,108221
+M0024,Holiday 24,Email,107890
+M0025,Holiday 25,Email,198944
+M0026,Summer Sale 26,Search,10419
+M0027,Holiday 27,Social,153310
+M0028,Black Friday 28,Search,103843
+M0029,Black Friday 29,Affiliate,18954
+M0030,Holiday 30,Search,8296
+M0031,Summer Sale 31,Social,137467
+M0032,Summer Sale 32,Search,161401
+M0033,Black Friday 33,Search,175594
+M0034,Holiday 34,Search,42873
+M0035,Summer Sale 35,Affiliate,166216
+M0036,Spring Deals 36,Email,117097
+M0037,Holiday 37,Search,137739
+M0038,Flash Sale 38,Email,88201
+M0039,Black Friday 39,Affiliate,75667
+M0040,Black Friday 40,Email,31429
+M0041,Flash Sale 41,Email,37535
+M0042,Flash Sale 42,Email,36202
+M0043,Flash Sale 43,Affiliate,31524
+M0044,Spring Deals 44,Email,96211
+M0045,Holiday 45,Search,180587
+M0046,Summer Sale 46,Social,84268
+M0047,Flash Sale 47,Social,161251
+M0048,Black Friday 48,Email,108331
+M0049,Flash Sale 49,Search,97532
+M0050,Flash Sale 50,Social,36132
+M0051,Spring Deals 51,Search,155833
+M0052,Spring Deals 52,Email,58250
+M0053,Summer Sale 53,Email,98933
+M0054,Holiday 54,Email,131509
+M0055,Black Friday 55,Email,94070
+M0056,Spring Deals 56,Search,24930
+M0057,Spring Deals 57,Search,199065
+M0058,Holiday 58,Social,139671
+M0059,Flash Sale 59,Social,151037
+M0060,Black Friday 60,Affiliate,12584
+M0061,Holiday 61,Search,165945
+M0062,Holiday 62,Social,150215
+M0063,Holiday 63,Email,36656
+M0064,Spring Deals 64,Affiliate,5959
+M0065,Summer Sale 65,Affiliate,101930
+M0066,Flash Sale 66,Email,107563
+M0067,Summer Sale 67,Social,137562
+M0068,Black Friday 68,Email,120838
+M0069,Flash Sale 69,Affiliate,195297
+M0070,Summer Sale 70,Social,25463
+M0071,Spring Deals 71,Social,110517
+M0072,Spring Deals 72,Email,72650
+M0073,Flash Sale 73,Email,71328
+M0074,Black Friday 74,Affiliate,90181
+M0075,Holiday 75,Search,11299
+M0076,Summer Sale 76,Affiliate,178345
+M0077,Spring Deals 77,Affiliate,191392
+M0078,Flash Sale 78,Affiliate,10548
+M0079,Holiday 79,Email,124099
+M0080,Black Friday 80,Search,84763
+M0081,Black Friday 81,Email,57476
+M0082,Black Friday 82,Search,26732
+M0083,Summer Sale 83,Search,69112
+M0084,Holiday 84,Email,55962
+M0085,Flash Sale 85,Social,77017
+M0086,Black Friday 86,Affiliate,89965
+M0087,Holiday 87,Affiliate,183376
+M0088,Spring Deals 88,Affiliate,186895
+M0089,Spring Deals 89,Social,47684
+M0090,Holiday 90,Search,158007
+M0091,Flash Sale 91,Social,110098
+M0092,Holiday 92,Social,42708
+M0093,Spring Deals 93,Email,75816
+M0094,Summer Sale 94,Search,57047
+M0095,Spring Deals 95,Email,40199
+M0096,Holiday 96,Affiliate,116348
+M0097,Summer Sale 97,Search,99542
+M0098,Holiday 98,Email,182355
+M0099,Flash Sale 99,Affiliate,28313
+M0100,Black Friday 100,Affiliate,187414
+M0101,Flash Sale 101,Search,24475
+M0102,Black Friday 102,Search,161769
+M0103,Flash Sale 103,Email,46888
+M0104,Spring Deals 104,Social,105710
+M0105,Summer Sale 105,Search,84532
+M0106,Flash Sale 106,Search,167416
+M0107,Spring Deals 107,Social,49439
+M0108,Flash Sale 108,Email,75202
+M0109,Black Friday 109,Social,14082
+M0110,Summer Sale 110,Email,66922
+M0111,Summer Sale 111,Email,64466
+M0112,Summer Sale 112,Search,59589
+M0113,Holiday 113,Social,134001
+M0114,Black Friday 114,Affiliate,33212
+M0115,Flash Sale 115,Social,43191
+M0116,Spring Deals 116,Email,169216
+M0117,Spring Deals 117,Social,166394
+M0118,Flash Sale 118,Search,42367
+M0119,Black Friday 119,Email,36345
+M0120,Flash Sale 120,Email,135272
+M0121,Holiday 121,Social,60325
+M0122,Holiday 122,Search,113783
+M0123,Flash Sale 123,Affiliate,116422
+M0124,Flash Sale 124,Social,33771
+M0125,Spring Deals 125,Email,96961
+M0126,Holiday 126,Social,55848
+M0127,Holiday 127,Social,65487
+M0128,Holiday 128,Search,11491
+M0129,Summer Sale 129,Social,7677
+M0130,Spring Deals 130,Social,84917
+M0131,Flash Sale 131,Search,12951
+M0132,Black Friday 132,Social,165457
+M0133,Spring Deals 133,Email,155780
+M0134,Summer Sale 134,Affiliate,57244
+M0135,Black Friday 135,Search,50262
+M0136,Summer Sale 136,Affiliate,96229
+M0137,Holiday 137,Email,18888
+M0138,Black Friday 138,Social,192407
+M0139,Spring Deals 139,Social,156122
+M0140,Spring Deals 140,Search,65316
+M0141,Spring Deals 141,Social,159446
+M0142,Spring Deals 142,Search,182179
+M0143,Black Friday 143,Search,20691
+M0144,Black Friday 144,Affiliate,19478
+M0145,Spring Deals 145,Social,149558
+M0146,Summer Sale 146,Social,170792
+M0147,Flash Sale 147,Affiliate,167881
+M0148,Spring Deals 148,Search,154139
+M0149,Flash Sale 149,Search,91395
+M0150,Summer Sale 150,Social,10548
+M0151,Summer Sale 151,Affiliate,165434
+M0152,Spring Deals 152,Email,116596
+M0153,Flash Sale 153,Search,14045
+M0154,Spring Deals 154,Email,20785
+M0155,Black Friday 155,Email,87654
+M0156,Spring Deals 156,Search,101799
+M0157,Holiday 157,Search,93012
+M0158,Black Friday 158,Social,103422
+M0159,Holiday 159,Search,152156
+M0160,Holiday 160,Email,185681
+M0161,Black Friday 161,Email,190613
+M0162,Holiday 162,Social,116194
+M0163,Spring Deals 163,Social,81588
+M0164,Flash Sale 164,Search,78815
+M0165,Flash Sale 165,Social,84953
+M0166,Flash Sale 166,Affiliate,93765
+M0167,Black Friday 167,Social,87407
+M0168,Flash Sale 168,Social,160279
+M0169,Flash Sale 169,Affiliate,84700
+M0170,Summer Sale 170,Search,34971
+M0171,Flash Sale 171,Search,61500
+M0172,Flash Sale 172,Social,166347
+M0173,Black Friday 173,Affiliate,152164
+M0174,Holiday 174,Email,68789
+M0175,Holiday 175,Search,129381
+M0176,Holiday 176,Email,50416
+M0177,Flash Sale 177,Affiliate,80807
+M0178,Summer Sale 178,Search,99515
+M0179,Summer Sale 179,Social,13987
+M0180,Summer Sale 180,Social,144159
+M0181,Summer Sale 181,Search,46828
+M0182,Summer Sale 182,Affiliate,99541
+M0183,Holiday 183,Social,66592
+M0184,Spring Deals 184,Affiliate,188681
+M0185,Summer Sale 185,Email,102470
+M0186,Flash Sale 186,Affiliate,155456
+M0187,Holiday 187,Email,89996
+M0188,Flash Sale 188,Search,110847
+M0189,Black Friday 189,Social,142561
+M0190,Summer Sale 190,Affiliate,196126
+M0191,Black Friday 191,Email,113825
+M0192,Summer Sale 192,Search,161234
+M0193,Flash Sale 193,Email,117364
+M0194,Spring Deals 194,Email,86813
+M0195,Flash Sale 195,Email,103296
+M0196,Summer Sale 196,Search,35348
+M0197,Black Friday 197,Social,164227
+M0198,Holiday 198,Email,192226
+M0199,Spring Deals 199,Affiliate,163724
+M0200,Spring Deals 200,Email,79692
+M0201,Black Friday 201,Affiliate,85977
+M0202,Holiday 202,Affiliate,23466
+M0203,Flash Sale 203,Affiliate,119389
+M0204,Holiday 204,Search,66857
+M0205,Holiday 205,Search,93687
+M0206,Spring Deals 206,Affiliate,167840
+M0207,Flash Sale 207,Search,160354
+M0208,Summer Sale 208,Email,130871
+M0209,Flash Sale 209,Affiliate,147990
+M0210,Holiday 210,Affiliate,20430
+M0211,Black Friday 211,Email,128673
+M0212,Summer Sale 212,Affiliate,10047
+M0213,Flash Sale 213,Social,151359
+M0214,Black Friday 214,Search,127822
+M0215,Summer Sale 215,Email,104699
+M0216,Summer Sale 216,Search,5972
+M0217,Flash Sale 217,Affiliate,116855
+M0218,Black Friday 218,Affiliate,186809
+M0219,Spring Deals 219,Affiliate,187326
+M0220,Flash Sale 220,Social,132483
+M0221,Black Friday 221,Affiliate,172435
+M0222,Flash Sale 222,Affiliate,69944
+M0223,Flash Sale 223,Search,165616
+M0224,Spring Deals 224,Social,173866
+M0225,Black Friday 225,Search,174620
+M0226,Summer Sale 226,Social,174689
+M0227,Summer Sale 227,Email,118632
+M0228,Summer Sale 228,Search,83493
+M0229,Flash Sale 229,Social,87576
+M0230,Black Friday 230,Email,106704
+M0231,Flash Sale 231,Search,119390
+M0232,Holiday 232,Social,166057
+M0233,Black Friday 233,Search,22086
+M0234,Spring Deals 234,Search,23829
+M0235,Spring Deals 235,Social,15109
+M0236,Summer Sale 236,Search,117829
+M0237,Flash Sale 237,Email,24831
+M0238,Spring Deals 238,Email,199171
+M0239,Holiday 239,Social,91620
+M0240,Holiday 240,Search,194202
+M0241,Flash Sale 241,Search,114014
+M0242,Holiday 242,Affiliate,85740
+M0243,Holiday 243,Search,33716
+M0244,Flash Sale 244,Social,171383
+M0245,Summer Sale 245,Social,54461
+M0246,Black Friday 246,Search,145664
+M0247,Holiday 247,Social,56326
+M0248,Flash Sale 248,Email,7366
+M0249,Spring Deals 249,Search,180864
+M0250,Spring Deals 250,Affiliate,181590
+M0251,Holiday 251,Search,57352
+M0252,Holiday 252,Affiliate,56288
+M0253,Summer Sale 253,Affiliate,100118
+M0254,Spring Deals 254,Email,73148
+M0255,Summer Sale 255,Email,10969
+M0256,Summer Sale 256,Affiliate,58472
+M0257,Flash Sale 257,Social,88334
+M0258,Black Friday 258,Email,107584
+M0259,Spring Deals 259,Email,170062
+M0260,Spring Deals 260,Affiliate,88835
+M0261,Summer Sale 261,Email,155577
+M0262,Summer Sale 262,Search,147360
+M0263,Holiday 263,Social,106540
+M0264,Black Friday 264,Social,100922
+M0265,Spring Deals 265,Email,23737
+M0266,Flash Sale 266,Social,6620
+M0267,Flash Sale 267,Affiliate,81508
+M0268,Black Friday 268,Social,105378
+M0269,Spring Deals 269,Search,28089
+M0270,Black Friday 270,Email,90218
+M0271,Holiday 271,Affiliate,93729
+M0272,Flash Sale 272,Affiliate,36504
+M0273,Black Friday 273,Email,178372
+M0274,Summer Sale 274,Affiliate,65456
+M0275,Spring Deals 275,Email,74444
+M0276,Holiday 276,Social,85313
+M0277,Flash Sale 277,Social,97444
+M0278,Holiday 278,Search,177584
+M0279,Black Friday 279,Social,123674
+M0280,Flash Sale 280,Email,155659
+M0281,Holiday 281,Email,136210
+M0282,Flash Sale 282,Affiliate,118447
+M0283,Black Friday 283,Email,47512
+M0284,Flash Sale 284,Social,48927
+M0285,Spring Deals 285,Email,134168
+M0286,Holiday 286,Affiliate,80483
+M0287,Spring Deals 287,Social,89275
+M0288,Flash Sale 288,Social,103425
+M0289,Spring Deals 289,Social,19119
+M0290,Summer Sale 290,Affiliate,195461
+M0291,Black Friday 291,Affiliate,100722
+M0292,Summer Sale 292,Email,53211
+M0293,Black Friday 293,Email,121886
+M0294,Flash Sale 294,Search,112098
+M0295,Summer Sale 295,Affiliate,72722
+M0296,Black Friday 296,Email,136565
+M0297,Flash Sale 297,Email,109351
+M0298,Flash Sale 298,Social,42023
+M0299,Summer Sale 299,Social,68932
+M0300,Holiday 300,Search,14995
+M0301,Summer Sale 301,Affiliate,57072
+M0302,Holiday 302,Affiliate,175451
+M0303,Flash Sale 303,Email,150152
+M0304,Black Friday 304,Affiliate,91568
+M0305,Spring Deals 305,Social,188186
+M0306,Black Friday 306,Affiliate,184462
+M0307,Summer Sale 307,Social,50697
+M0308,Flash Sale 308,Social,121148
+M0309,Flash Sale 309,Social,147948
+M0310,Holiday 310,Search,174966
+M0311,Spring Deals 311,Affiliate,69623
+M0312,Flash Sale 312,Search,23390
+M0313,Flash Sale 313,Affiliate,165438
+M0314,Spring Deals 314,Email,160927
+M0315,Flash Sale 315,Social,81690
+M0316,Spring Deals 316,Social,27727
+M0317,Flash Sale 317,Affiliate,116162
+M0318,Summer Sale 318,Affiliate,62743
+M0319,Holiday 319,Email,72635
+M0320,Flash Sale 320,Email,132006
+M0321,Spring Deals 321,Search,101516
+M0322,Summer Sale 322,Social,128867
+M0323,Holiday 323,Social,10712
+M0324,Summer Sale 324,Search,132078
+M0325,Spring Deals 325,Social,22330
+M0326,Spring Deals 326,Email,165144
+M0327,Black Friday 327,Social,41401
+M0328,Summer Sale 328,Affiliate,188938
+M0329,Black Friday 329,Email,42812
+M0330,Holiday 330,Social,90748
+M0331,Black Friday 331,Search,193790
+M0332,Black Friday 332,Email,98048
+M0333,Spring Deals 333,Affiliate,191519
+M0334,Summer Sale 334,Email,187267
+M0335,Holiday 335,Affiliate,64772
+M0336,Holiday 336,Email,5942
+M0337,Spring Deals 337,Email,14186
+M0338,Black Friday 338,Search,44511
+M0339,Holiday 339,Search,122277
+M0340,Holiday 340,Email,5094
+M0341,Flash Sale 341,Search,30941
+M0342,Summer Sale 342,Email,193824
+M0343,Spring Deals 343,Search,27511
+M0344,Flash Sale 344,Email,25766
+M0345,Black Friday 345,Social,106389
+M0346,Flash Sale 346,Social,117599
+M0347,Black Friday 347,Affiliate,148917
+M0348,Black Friday 348,Affiliate,67501
+M0349,Spring Deals 349,Affiliate,65266
+M0350,Summer Sale 350,Social,107196
+M0351,Flash Sale 351,Search,147959
+M0352,Summer Sale 352,Search,187085
+M0353,Spring Deals 353,Search,193272
+M0354,Holiday 354,Email,75228
+M0355,Holiday 355,Email,190515
+M0356,Flash Sale 356,Social,82582
+M0357,Spring Deals 357,Search,83176
+M0358,Summer Sale 358,Email,152341
+M0359,Black Friday 359,Affiliate,90172
+M0360,Spring Deals 360,Social,57291
+M0361,Summer Sale 361,Email,14190
+M0362,Summer Sale 362,Email,76307
+M0363,Flash Sale 363,Social,48780
+M0364,Holiday 364,Social,173234
+M0365,Flash Sale 365,Affiliate,195066
+M0366,Summer Sale 366,Affiliate,22375
+M0367,Spring Deals 367,Affiliate,100158
+M0368,Holiday 368,Social,144523
+M0369,Summer Sale 369,Social,139473
+M0370,Black Friday 370,Affiliate,58309
+M0371,Summer Sale 371,Affiliate,176300
+M0372,Black Friday 372,Affiliate,177822
+M0373,Black Friday 373,Affiliate,39068
+M0374,Holiday 374,Social,108770
+M0375,Summer Sale 375,Search,158777
+M0376,Holiday 376,Search,129876
+M0377,Holiday 377,Search,67032
+M0378,Flash Sale 378,Social,144465
+M0379,Spring Deals 379,Social,111932
+M0380,Holiday 380,Social,76698
+M0381,Black Friday 381,Search,164593
+M0382,Holiday 382,Social,119833
+M0383,Spring Deals 383,Search,50088
+M0384,Flash Sale 384,Search,56407
+M0385,Summer Sale 385,Affiliate,23958
+M0386,Spring Deals 386,Search,127688
+M0387,Summer Sale 387,Affiliate,88182
+M0388,Black Friday 388,Search,16353
+M0389,Black Friday 389,Search,114100
+M0390,Flash Sale 390,Search,75826
+M0391,Holiday 391,Affiliate,105955
+M0392,Flash Sale 392,Email,113421
+M0393,Flash Sale 393,Affiliate,29662
+M0394,Black Friday 394,Social,82295
+M0395,Spring Deals 395,Search,77898
+M0396,Flash Sale 396,Affiliate,22857
+M0397,Flash Sale 397,Search,167687
+M0398,Flash Sale 398,Social,107323
+M0399,Spring Deals 399,Affiliate,147213
+M0400,Flash Sale 400,Social,7795
+M0401,Summer Sale 401,Email,85854
+M0402,Black Friday 402,Social,36142
+M0403,Spring Deals 403,Search,124886
+M0404,Spring Deals 404,Social,157988
+M0405,Flash Sale 405,Email,108015
+M0406,Flash Sale 406,Search,173061
+M0407,Black Friday 407,Social,188729
+M0408,Summer Sale 408,Email,146305
+M0409,Black Friday 409,Social,74693
+M0410,Summer Sale 410,Search,23534
+M0411,Spring Deals 411,Social,99386
+M0412,Holiday 412,Social,75790
+M0413,Summer Sale 413,Social,87320
+M0414,Summer Sale 414,Affiliate,56234
+M0415,Flash Sale 415,Social,120116
+M0416,Spring Deals 416,Social,70873
+M0417,Black Friday 417,Affiliate,47399
+M0418,Summer Sale 418,Social,79964
+M0419,Flash Sale 419,Affiliate,89419
+M0420,Spring Deals 420,Search,176850
+M0421,Flash Sale 421,Email,43762
+M0422,Spring Deals 422,Email,112738
+M0423,Summer Sale 423,Social,72857
+M0424,Black Friday 424,Search,18931
+M0425,Spring Deals 425,Affiliate,128244
+M0426,Black Friday 426,Affiliate,125653
+M0427,Spring Deals 427,Affiliate,146656
+M0428,Summer Sale 428,Email,80252
+M0429,Summer Sale 429,Email,115989
+M0430,Black Friday 430,Email,25965
+M0431,Flash Sale 431,Search,132985
+M0432,Summer Sale 432,Email,189040
+M0433,Flash Sale 433,Affiliate,187138
+M0434,Holiday 434,Social,101972
+M0435,Summer Sale 435,Email,118680
+M0436,Black Friday 436,Search,129873
+M0437,Summer Sale 437,Email,151258
+M0438,Holiday 438,Search,151988
+M0439,Summer Sale 439,Search,52778
+M0440,Summer Sale 440,Affiliate,77153
+M0441,Flash Sale 441,Social,146791
+M0442,Flash Sale 442,Social,70119
+M0443,Black Friday 443,Affiliate,178746
+M0444,Summer Sale 444,Email,165306
+M0445,Flash Sale 445,Social,19410
+M0446,Spring Deals 446,Affiliate,128898
+M0447,Holiday 447,Social,93543
+M0448,Black Friday 448,Search,158437
+M0449,Spring Deals 449,Search,93361
+M0450,Holiday 450,Search,64994
+M0451,Spring Deals 451,Email,86694
+M0452,Summer Sale 452,Affiliate,163372
+M0453,Spring Deals 453,Search,32141
+M0454,Summer Sale 454,Email,38033
+M0455,Flash Sale 455,Social,165225
+M0456,Black Friday 456,Social,162345
+M0457,Flash Sale 457,Search,25653
+M0458,Holiday 458,Affiliate,192599
+M0459,Spring Deals 459,Affiliate,176730
+M0460,Flash Sale 460,Search,89944
+M0461,Flash Sale 461,Affiliate,185792
+M0462,Holiday 462,Search,164918
+M0463,Flash Sale 463,Affiliate,198459
+M0464,Black Friday 464,Affiliate,197726
+M0465,Holiday 465,Social,93744
+M0466,Summer Sale 466,Email,14621
+M0467,Spring Deals 467,Affiliate,136306
+M0468,Spring Deals 468,Email,17033
+M0469,Summer Sale 469,Social,141062
+M0470,Flash Sale 470,Affiliate,65793
+M0471,Flash Sale 471,Search,122869
+M0472,Black Friday 472,Social,149185
+M0473,Summer Sale 473,Social,24114
+M0474,Flash Sale 474,Search,176669
+M0475,Holiday 475,Email,8793
+M0476,Flash Sale 476,Email,147443
+M0477,Black Friday 477,Affiliate,111761
+M0478,Flash Sale 478,Search,52215
+M0479,Black Friday 479,Search,71499
+M0480,Spring Deals 480,Email,69761
+M0481,Holiday 481,Email,181899
+M0482,Summer Sale 482,Email,115130
+M0483,Summer Sale 483,Email,15190
+M0484,Spring Deals 484,Search,73177
+M0485,Spring Deals 485,Email,49843
+M0486,Spring Deals 486,Social,191595
+M0487,Spring Deals 487,Search,71751
+M0488,Summer Sale 488,Affiliate,96476
+M0489,Holiday 489,Search,192291
+M0490,Spring Deals 490,Search,97453
+M0491,Summer Sale 491,Affiliate,193831
+M0492,Spring Deals 492,Affiliate,68119
+M0493,Spring Deals 493,Search,55101
+M0494,Black Friday 494,Email,192721
+M0495,Summer Sale 495,Email,157341
+M0496,Black Friday 496,Email,117081
+M0497,Black Friday 497,Email,151070
+M0498,Summer Sale 498,Email,50528
+M0499,Flash Sale 499,Search,134112
+M0500,Black Friday 500,Email,55255
+M0501,Summer Sale 501,Social,119745
+M0502,Black Friday 502,Email,34300
+M0503,Spring Deals 503,Affiliate,86888
+M0504,Flash Sale 504,Email,37379
+M0505,Flash Sale 505,Social,102424
+M0506,Spring Deals 506,Search,128801
+M0507,Flash Sale 507,Social,49268
+M0508,Black Friday 508,Affiliate,60553
+M0509,Holiday 509,Search,93300
+M0510,Summer Sale 510,Search,90641
+M0511,Holiday 511,Social,83097
+M0512,Spring Deals 512,Affiliate,118994
+M0513,Summer Sale 513,Affiliate,199575
+M0514,Summer Sale 514,Social,25486
+M0515,Holiday 515,Affiliate,156788
+M0516,Black Friday 516,Search,88934
+M0517,Flash Sale 517,Affiliate,72865
+M0518,Flash Sale 518,Search,163692
+M0519,Summer Sale 519,Social,36350
+M0520,Flash Sale 520,Email,66554
+M0521,Flash Sale 521,Social,36691
+M0522,Summer Sale 522,Affiliate,20729
+M0523,Black Friday 523,Email,26194
+M0524,Holiday 524,Search,171071
+M0525,Black Friday 525,Affiliate,17663
+M0526,Spring Deals 526,Email,124034
+M0527,Summer Sale 527,Search,41327
+M0528,Spring Deals 528,Search,112330
+M0529,Spring Deals 529,Search,148101
+M0530,Summer Sale 530,Email,44062
+M0531,Black Friday 531,Email,151111
+M0532,Flash Sale 532,Search,188142
+M0533,Holiday 533,Social,57170
+M0534,Holiday 534,Affiliate,158464
+M0535,Flash Sale 535,Affiliate,74085
+M0536,Holiday 536,Email,88982
+M0537,Flash Sale 537,Affiliate,45424
+M0538,Holiday 538,Social,98487
+M0539,Summer Sale 539,Affiliate,170229
+M0540,Spring Deals 540,Search,106261
+M0541,Black Friday 541,Social,197711
+M0542,Flash Sale 542,Email,24570
+M0543,Summer Sale 543,Social,40739
+M0544,Holiday 544,Affiliate,106892
+M0545,Black Friday 545,Social,21711
+M0546,Holiday 546,Email,81867
+M0547,Summer Sale 547,Affiliate,76767
+M0548,Black Friday 548,Search,81007
+M0549,Black Friday 549,Social,131850
+M0550,Holiday 550,Email,132301
+M0551,Holiday 551,Search,34498
+M0552,Summer Sale 552,Social,12727
+M0553,Summer Sale 553,Social,40282
+M0554,Summer Sale 554,Affiliate,145159
+M0555,Summer Sale 555,Email,99028
+M0556,Black Friday 556,Search,170285
+M0557,Spring Deals 557,Social,9671
+M0558,Black Friday 558,Search,146511
+M0559,Spring Deals 559,Affiliate,66363
+M0560,Holiday 560,Email,11243
+M0561,Spring Deals 561,Search,157993
+M0562,Holiday 562,Email,34860
+M0563,Spring Deals 563,Email,132157
+M0564,Holiday 564,Affiliate,163067
+M0565,Black Friday 565,Search,194542
+M0566,Spring Deals 566,Affiliate,75399
+M0567,Holiday 567,Search,181219
+M0568,Black Friday 568,Social,115206
+M0569,Flash Sale 569,Social,131388
+M0570,Holiday 570,Affiliate,31122
+M0571,Black Friday 571,Search,50208
+M0572,Flash Sale 572,Email,175335
+M0573,Holiday 573,Email,49315
+M0574,Black Friday 574,Search,184603
+M0575,Holiday 575,Affiliate,63149
+M0576,Spring Deals 576,Affiliate,96404
+M0577,Spring Deals 577,Email,7539
+M0578,Flash Sale 578,Affiliate,154964
+M0579,Summer Sale 579,Affiliate,44640
+M0580,Spring Deals 580,Social,26374
+M0581,Summer Sale 581,Email,95533
+M0582,Flash Sale 582,Affiliate,11279
+M0583,Spring Deals 583,Social,95152
+M0584,Flash Sale 584,Social,109574
+M0585,Holiday 585,Affiliate,92038
+M0586,Spring Deals 586,Search,29391
+M0587,Black Friday 587,Search,118873
+M0588,Black Friday 588,Email,132184
+M0589,Black Friday 589,Search,90422
+M0590,Flash Sale 590,Search,42156
+M0591,Black Friday 591,Social,187836
+M0592,Black Friday 592,Affiliate,45593
+M0593,Spring Deals 593,Email,105707
+M0594,Black Friday 594,Email,15136
+M0595,Spring Deals 595,Search,7235
+M0596,Spring Deals 596,Social,168428
+M0597,Holiday 597,Affiliate,11213
+M0598,Holiday 598,Affiliate,30149
+M0599,Black Friday 599,Search,49726
+M0600,Flash Sale 600,Social,23518
+M0601,Black Friday 601,Affiliate,76939
+M0602,Black Friday 602,Email,17695
+M0603,Summer Sale 603,Affiliate,175708
+M0604,Summer Sale 604,Affiliate,199883
+M0605,Spring Deals 605,Social,171809
+M0606,Black Friday 606,Social,148004
+M0607,Black Friday 607,Email,106387
+M0608,Summer Sale 608,Search,196890
+M0609,Black Friday 609,Email,199110
+M0610,Black Friday 610,Affiliate,58876
+M0611,Black Friday 611,Social,198448
+M0612,Summer Sale 612,Search,88128
+M0613,Spring Deals 613,Email,145617
+M0614,Summer Sale 614,Affiliate,193303
+M0615,Spring Deals 615,Search,172984
+M0616,Holiday 616,Email,129264
+M0617,Summer Sale 617,Social,139169
+M0618,Flash Sale 618,Email,25867
+M0619,Black Friday 619,Social,53295
+M0620,Summer Sale 620,Email,138866
+M0621,Spring Deals 621,Email,142014
+M0622,Holiday 622,Email,175717
+M0623,Summer Sale 623,Search,71713
+M0624,Black Friday 624,Email,119659
+M0625,Spring Deals 625,Social,106948
+M0626,Spring Deals 626,Social,77803
+M0627,Summer Sale 627,Email,135255
+M0628,Black Friday 628,Social,148414
+M0629,Black Friday 629,Social,119039
+M0630,Spring Deals 630,Social,60807
+M0631,Black Friday 631,Search,122474
+M0632,Spring Deals 632,Affiliate,164633
+M0633,Summer Sale 633,Affiliate,76251
+M0634,Spring Deals 634,Email,178990
+M0635,Spring Deals 635,Affiliate,170696
+M0636,Black Friday 636,Email,105222
+M0637,Summer Sale 637,Affiliate,68451
+M0638,Holiday 638,Affiliate,17399
+M0639,Black Friday 639,Email,84895
+M0640,Black Friday 640,Affiliate,163622
+M0641,Summer Sale 641,Search,111481
+M0642,Holiday 642,Search,93133
+M0643,Black Friday 643,Social,12978
+M0644,Black Friday 644,Affiliate,159617
+M0645,Holiday 645,Search,187612
+M0646,Flash Sale 646,Search,79943
+M0647,Black Friday 647,Search,149323
+M0648,Black Friday 648,Email,142048
+M0649,Black Friday 649,Search,117613
+M0650,Summer Sale 650,Affiliate,38944
+M0651,Black Friday 651,Search,32317
+M0652,Spring Deals 652,Email,163430
+M0653,Summer Sale 653,Email,110155
+M0654,Black Friday 654,Social,76538
+M0655,Summer Sale 655,Social,91758
+M0656,Black Friday 656,Affiliate,95164
+M0657,Summer Sale 657,Search,127565
+M0658,Flash Sale 658,Email,92878
+M0659,Black Friday 659,Email,123153
+M0660,Black Friday 660,Social,48703
+M0661,Spring Deals 661,Affiliate,133204
+M0662,Spring Deals 662,Affiliate,76334
+M0663,Flash Sale 663,Search,30140
+M0664,Summer Sale 664,Email,116762
+M0665,Black Friday 665,Affiliate,100115
+M0666,Flash Sale 666,Affiliate,155891
+M0667,Summer Sale 667,Email,43579
+M0668,Holiday 668,Social,68469
+M0669,Black Friday 669,Social,41104
+M0670,Spring Deals 670,Search,65145
+M0671,Holiday 671,Affiliate,54187
+M0672,Black Friday 672,Social,118137
+M0673,Flash Sale 673,Search,62601
+M0674,Spring Deals 674,Search,13353
+M0675,Summer Sale 675,Search,133903
+M0676,Flash Sale 676,Social,147034
+M0677,Summer Sale 677,Social,136560
+M0678,Summer Sale 678,Affiliate,56088
+M0679,Black Friday 679,Social,106270
+M0680,Flash Sale 680,Email,115021
+M0681,Holiday 681,Search,116891
+M0682,Black Friday 682,Affiliate,67199
+M0683,Spring Deals 683,Email,177569
+M0684,Black Friday 684,Search,17390
+M0685,Spring Deals 685,Social,108188
+M0686,Black Friday 686,Search,45497
+M0687,Flash Sale 687,Search,47325
+M0688,Holiday 688,Affiliate,161575
+M0689,Summer Sale 689,Search,11102
+M0690,Summer Sale 690,Search,167396
+M0691,Summer Sale 691,Email,36726
+M0692,Flash Sale 692,Social,70398
+M0693,Holiday 693,Affiliate,151223
+M0694,Summer Sale 694,Email,146047
+M0695,Holiday 695,Social,107022
+M0696,Holiday 696,Search,111533
+M0697,Flash Sale 697,Email,118652
+M0698,Holiday 698,Social,72299
+M0699,Holiday 699,Affiliate,29372
+M0700,Summer Sale 700,Email,67308
+M0701,Spring Deals 701,Affiliate,21543
+M0702,Black Friday 702,Search,166512
+M0703,Holiday 703,Affiliate,151368
+M0704,Summer Sale 704,Email,27488
+M0705,Spring Deals 705,Social,108789
+M0706,Holiday 706,Social,165959
+M0707,Spring Deals 707,Email,107933
+M0708,Flash Sale 708,Email,192204
+M0709,Black Friday 709,Search,100870
+M0710,Holiday 710,Email,187551
+M0711,Black Friday 711,Social,47349
+M0712,Black Friday 712,Affiliate,103289
+M0713,Flash Sale 713,Email,194671
+M0714,Summer Sale 714,Email,47724
+M0715,Black Friday 715,Search,33719
+M0716,Black Friday 716,Email,140129
+M0717,Holiday 717,Search,82777
+M0718,Holiday 718,Search,38667
+M0719,Flash Sale 719,Search,196706
+M0720,Flash Sale 720,Social,161671
+M0721,Spring Deals 721,Email,42701
+M0722,Holiday 722,Search,175096
+M0723,Holiday 723,Search,195546
+M0724,Summer Sale 724,Email,121444
+M0725,Summer Sale 725,Affiliate,94680
+M0726,Flash Sale 726,Email,14327
+M0727,Black Friday 727,Affiliate,136428
+M0728,Spring Deals 728,Search,159586
+M0729,Flash Sale 729,Email,170276
+M0730,Flash Sale 730,Social,163111
+M0731,Holiday 731,Email,137777
+M0732,Flash Sale 732,Social,123388
+M0733,Summer Sale 733,Affiliate,126507
+M0734,Holiday 734,Affiliate,128490
+M0735,Flash Sale 735,Social,171236
+M0736,Spring Deals 736,Affiliate,155536
+M0737,Holiday 737,Email,5346
+M0738,Summer Sale 738,Email,7886
+M0739,Flash Sale 739,Search,25840
+M0740,Spring Deals 740,Email,51145
+M0741,Holiday 741,Social,145442
+M0742,Holiday 742,Affiliate,132332
+M0743,Flash Sale 743,Social,23125
+M0744,Summer Sale 744,Email,181669
+M0745,Black Friday 745,Social,164528
+M0746,Spring Deals 746,Affiliate,30484
+M0747,Summer Sale 747,Affiliate,128728
+M0748,Spring Deals 748,Affiliate,80169
+M0749,Flash Sale 749,Affiliate,37189
+M0750,Black Friday 750,Social,193224
+M0751,Holiday 751,Search,185055
+M0752,Spring Deals 752,Social,116205
+M0753,Summer Sale 753,Email,59721
+M0754,Flash Sale 754,Email,28823
+M0755,Flash Sale 755,Social,96208
+M0756,Holiday 756,Search,98897
+M0757,Black Friday 757,Email,77766
+M0758,Summer Sale 758,Email,150886
+M0759,Summer Sale 759,Affiliate,193426
+M0760,Spring Deals 760,Affiliate,58131
+M0761,Spring Deals 761,Social,85166
+M0762,Spring Deals 762,Email,132638
+M0763,Holiday 763,Affiliate,58385
+M0764,Summer Sale 764,Email,108420
+M0765,Black Friday 765,Social,139839
+M0766,Holiday 766,Email,55722
+M0767,Spring Deals 767,Social,93415
+M0768,Spring Deals 768,Email,60511
+M0769,Holiday 769,Email,136784
+M0770,Holiday 770,Email,138488
+M0771,Black Friday 771,Email,24104
+M0772,Holiday 772,Affiliate,114668
+M0773,Spring Deals 773,Email,108526
+M0774,Summer Sale 774,Affiliate,55393
+M0775,Black Friday 775,Search,47748
+M0776,Black Friday 776,Social,100763
+M0777,Holiday 777,Email,152798
+M0778,Flash Sale 778,Search,129614
+M0779,Black Friday 779,Search,194263
+M0780,Flash Sale 780,Social,19216
+M0781,Spring Deals 781,Social,65657
+M0782,Black Friday 782,Search,150567
+M0783,Summer Sale 783,Affiliate,68203
+M0784,Summer Sale 784,Search,40111
+M0785,Flash Sale 785,Email,134036
+M0786,Spring Deals 786,Email,93842
+M0787,Summer Sale 787,Search,50641
+M0788,Black Friday 788,Affiliate,79223
+M0789,Holiday 789,Email,100068
+M0790,Flash Sale 790,Social,161013
+M0791,Summer Sale 791,Search,144751
+M0792,Summer Sale 792,Email,144243
+M0793,Holiday 793,Affiliate,59317
+M0794,Holiday 794,Email,131091
+M0795,Black Friday 795,Search,36012
+M0796,Spring Deals 796,Email,155494
+M0797,Flash Sale 797,Affiliate,172650
+M0798,Holiday 798,Affiliate,190858
+M0799,Holiday 799,Affiliate,153087
+M0800,Holiday 800,Email,155726
+M0801,Spring Deals 801,Search,47362
+M0802,Spring Deals 802,Social,13123
+M0803,Spring Deals 803,Email,144244
+M0804,Flash Sale 804,Affiliate,131987
+M0805,Black Friday 805,Affiliate,123794
+M0806,Summer Sale 806,Email,55938
+M0807,Black Friday 807,Social,101053
+M0808,Summer Sale 808,Social,12441
+M0809,Black Friday 809,Email,184587
+M0810,Summer Sale 810,Search,31119
+M0811,Summer Sale 811,Affiliate,173701
+M0812,Holiday 812,Affiliate,166184
+M0813,Summer Sale 813,Email,71818
+M0814,Holiday 814,Social,47111
+M0815,Black Friday 815,Social,76879
+M0816,Spring Deals 816,Social,107197
+M0817,Spring Deals 817,Social,52881
+M0818,Holiday 818,Social,183641
+M0819,Flash Sale 819,Affiliate,178128
+M0820,Holiday 820,Search,151724
+M0821,Summer Sale 821,Search,60733
+M0822,Spring Deals 822,Email,127194
+M0823,Summer Sale 823,Affiliate,74540
+M0824,Black Friday 824,Social,116318
+M0825,Black Friday 825,Search,198373
+M0826,Spring Deals 826,Social,124202
+M0827,Black Friday 827,Search,105472
+M0828,Flash Sale 828,Email,88926
+M0829,Spring Deals 829,Email,22527
+M0830,Summer Sale 830,Affiliate,131135
+M0831,Summer Sale 831,Social,97034
+M0832,Holiday 832,Affiliate,75888
+M0833,Flash Sale 833,Search,88267
+M0834,Summer Sale 834,Email,90651
+M0835,Summer Sale 835,Search,170895
+M0836,Spring Deals 836,Social,26791
+M0837,Spring Deals 837,Email,7418
+M0838,Spring Deals 838,Social,84869
+M0839,Summer Sale 839,Affiliate,91709
+M0840,Holiday 840,Social,159083
+M0841,Holiday 841,Search,45952
+M0842,Summer Sale 842,Email,65489
+M0843,Black Friday 843,Social,145239
+M0844,Flash Sale 844,Affiliate,116352
+M0845,Summer Sale 845,Search,168721
+M0846,Spring Deals 846,Affiliate,43458
+M0847,Holiday 847,Search,90968
+M0848,Flash Sale 848,Email,42815
+M0849,Holiday 849,Social,137783
+M0850,Flash Sale 850,Social,198508
+M0851,Summer Sale 851,Email,116772
+M0852,Summer Sale 852,Search,105004
+M0853,Summer Sale 853,Email,64519
+M0854,Spring Deals 854,Affiliate,120185
+M0855,Summer Sale 855,Social,85174
+M0856,Holiday 856,Affiliate,65942
+M0857,Holiday 857,Social,89740
+M0858,Holiday 858,Social,124984
+M0859,Flash Sale 859,Social,24820
+M0860,Summer Sale 860,Search,109194
+M0861,Flash Sale 861,Email,26265
+M0862,Summer Sale 862,Email,100084
+M0863,Black Friday 863,Affiliate,157842
+M0864,Black Friday 864,Search,179091
+M0865,Black Friday 865,Search,172797
+M0866,Spring Deals 866,Affiliate,125791
+M0867,Summer Sale 867,Affiliate,168787
+M0868,Flash Sale 868,Email,127360
+M0869,Black Friday 869,Affiliate,171043
+M0870,Summer Sale 870,Email,155574
+M0871,Black Friday 871,Social,116691
+M0872,Summer Sale 872,Email,34305
+M0873,Black Friday 873,Social,158484
+M0874,Flash Sale 874,Affiliate,50756
+M0875,Holiday 875,Search,149388
+M0876,Flash Sale 876,Affiliate,33583
+M0877,Holiday 877,Affiliate,198428
+M0878,Spring Deals 878,Email,131450
+M0879,Summer Sale 879,Search,54794
+M0880,Flash Sale 880,Email,76710
+M0881,Summer Sale 881,Social,130815
+M0882,Spring Deals 882,Social,170860
+M0883,Flash Sale 883,Social,142454
+M0884,Black Friday 884,Email,49590
+M0885,Spring Deals 885,Affiliate,133017
+M0886,Holiday 886,Search,87144
+M0887,Summer Sale 887,Affiliate,75636
+M0888,Spring Deals 888,Email,139420
+M0889,Flash Sale 889,Social,20670
+M0890,Holiday 890,Search,27246
+M0891,Holiday 891,Affiliate,104764
+M0892,Summer Sale 892,Search,51153
+M0893,Flash Sale 893,Email,11238
+M0894,Flash Sale 894,Search,15313
+M0895,Holiday 895,Email,188408
+M0896,Holiday 896,Affiliate,124327
+M0897,Flash Sale 897,Affiliate,178720
+M0898,Spring Deals 898,Search,26403
+M0899,Spring Deals 899,Email,17522
+M0900,Black Friday 900,Search,70561
+M0901,Holiday 901,Social,17950
+M0902,Black Friday 902,Search,22603
+M0903,Holiday 903,Social,95755
+M0904,Summer Sale 904,Email,117763
+M0905,Flash Sale 905,Affiliate,38211
+M0906,Flash Sale 906,Social,155949
+M0907,Holiday 907,Email,75141
+M0908,Summer Sale 908,Email,133517
+M0909,Black Friday 909,Affiliate,190040
+M0910,Black Friday 910,Search,82746
+M0911,Summer Sale 911,Affiliate,158017
+M0912,Holiday 912,Social,65070
+M0913,Spring Deals 913,Email,31861
+M0914,Flash Sale 914,Affiliate,46408
+M0915,Spring Deals 915,Social,86193
+M0916,Black Friday 916,Email,159663
+M0917,Flash Sale 917,Email,194978
+M0918,Summer Sale 918,Email,39120
+M0919,Flash Sale 919,Email,40096
+M0920,Flash Sale 920,Affiliate,24520
+M0921,Holiday 921,Email,77067
+M0922,Holiday 922,Affiliate,86781
+M0923,Summer Sale 923,Affiliate,50546
+M0924,Flash Sale 924,Email,19830
+M0925,Summer Sale 925,Search,140618
+M0926,Spring Deals 926,Affiliate,135319
+M0927,Spring Deals 927,Affiliate,64752
+M0928,Spring Deals 928,Search,127363
+M0929,Spring Deals 929,Social,44927
+M0930,Summer Sale 930,Social,193253
+M0931,Spring Deals 931,Social,139127
+M0932,Holiday 932,Social,141901
+M0933,Spring Deals 933,Email,192470
+M0934,Holiday 934,Search,6756
+M0935,Black Friday 935,Affiliate,113882
+M0936,Flash Sale 936,Affiliate,189179
+M0937,Flash Sale 937,Social,10515
+M0938,Black Friday 938,Affiliate,163480
+M0939,Spring Deals 939,Email,73306
+M0940,Holiday 940,Affiliate,110519
+M0941,Black Friday 941,Social,116713
+M0942,Black Friday 942,Affiliate,19544
+M0943,Summer Sale 943,Social,84449
+M0944,Black Friday 944,Email,64299
+M0945,Black Friday 945,Affiliate,41821
+M0946,Flash Sale 946,Search,24272
+M0947,Flash Sale 947,Email,170992
+M0948,Flash Sale 948,Affiliate,170803
+M0949,Flash Sale 949,Social,182486
+M0950,Flash Sale 950,Social,64735
+M0951,Flash Sale 951,Email,126554
+M0952,Black Friday 952,Search,43290
+M0953,Black Friday 953,Social,102851
+M0954,Spring Deals 954,Search,164711
+M0955,Summer Sale 955,Search,139632
+M0956,Black Friday 956,Social,184762
+M0957,Spring Deals 957,Social,149122
+M0958,Spring Deals 958,Affiliate,47713
+M0959,Summer Sale 959,Affiliate,117599
+M0960,Summer Sale 960,Affiliate,40474
+M0961,Flash Sale 961,Search,126752
+M0962,Flash Sale 962,Social,15674
+M0963,Flash Sale 963,Affiliate,155163
+M0964,Summer Sale 964,Affiliate,171593
+M0965,Flash Sale 965,Search,51298
+M0966,Black Friday 966,Email,82190
+M0967,Spring Deals 967,Search,13850
+M0968,Holiday 968,Email,198499
+M0969,Flash Sale 969,Search,166014
+M0970,Spring Deals 970,Email,120928
+M0971,Summer Sale 971,Affiliate,114928
+M0972,Summer Sale 972,Social,138611
+M0973,Flash Sale 973,Affiliate,11249
+M0974,Flash Sale 974,Email,67330
+M0975,Spring Deals 975,Affiliate,23434
+M0976,Summer Sale 976,Social,198370
+M0977,Summer Sale 977,Email,16180
+M0978,Spring Deals 978,Search,123826
+M0979,Summer Sale 979,Email,38418
+M0980,Summer Sale 980,Social,90664
+M0981,Summer Sale 981,Email,57069
+M0982,Flash Sale 982,Social,121093
+M0983,Black Friday 983,Email,41962
+M0984,Black Friday 984,Search,40012
+M0985,Holiday 985,Search,95223
+M0986,Black Friday 986,Email,18107
+M0987,Black Friday 987,Search,81145
+M0988,Spring Deals 988,Social,85989
+M0989,Black Friday 989,Social,31827
+M0990,Summer Sale 990,Search,186343
+M0991,Spring Deals 991,Email,38761
+M0992,Holiday 992,Social,194830
+M0993,Summer Sale 993,Affiliate,136648
+M0994,Holiday 994,Email,76493
+M0995,Flash Sale 995,Affiliate,197972
+M0996,Flash Sale 996,Email,59964
+M0997,Black Friday 997,Social,176149
+M0998,Flash Sale 998,Search,8478
+M0999,Flash Sale 999,Affiliate,104114
+M1000,Spring Deals 1000,Social,46541
