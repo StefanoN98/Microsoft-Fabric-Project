@@ -16,7 +16,8 @@ These conventions are applied uniformly across Lakehouses, Warehouses, Pipelines
 | Warehouse | `WH_` | `WH_Retail` |
 | Pipeline | `PL_` | `PL_Ingest_CRM` |
 | Notebook | `NB_` | `NB_Silver_Orders` |
-| Semantic Model | `SM_` | `SM_Retail` 
+| Semantic Model | `SM_` | `SM_Retail` |
+| Stored Procedure| `SP_` | `SP_load_fact_orders`|
 
 ---
 
@@ -26,12 +27,11 @@ These conventions are applied uniformly across Lakehouses, Warehouses, Pipelines
 - `LH_Bronze` — raw layer
 - `LH_Silver` — cleaned/standardized layer
 
-
 ### Warehouse
 - `WH_Retail` — Gold layer, hosts dimension and fact tables
 
 ### Pipelines
-- `PL_INGEST` — ingestion from Azure Data Lake Storage Gen2 (Bronze)
+- `PL_INGEST` — raw data ingestion
 - `PL_Silver` — Bronze → Silver transformation orchestration
 - `PL_Gold` — Silver → Gold loading orchestration (stored procedures)
 - `PL_Orchestration` — end-to-end trigger of all layer pipelines + semantic model refresh
@@ -45,26 +45,13 @@ These conventions are applied uniformly across Lakehouses, Warehouses, Pipelines
 - `NB_Silver_Clean_Load_product_catalog` — nested JSON flattening (attributes/images)
 - `NB_Define_SQL_Gold_Datatype` — SQL Server datatype profiling for Gold DDL generation
 
+### Stored Procedure
+- `SP_load_<table_name>` (e.g. `SP_load_dim_customers`, `SP_load_fact_orders`)
+
 ### Semantic Model
 - `SM_GlobalRetail` — Direct Lake semantic model built on top of `WH_Retail`
 
 ---
-
-## Folder Organization (Notebooks & Pipelines)
-
-To avoid a flat, hard-to-navigate workspace, notebooks and pipelines are grouped by their functional stage:
-
-```text
-
-Pipelines
-│
-├── PL_INGEST_ADLS
-├── PL_INGEST_GITHUB
-├── PL_INGEST_SQLSERVER
-├── PL_BRONZE_TO_SILVER
-└── PL_SILVER_TO_GOLD
-```
-
 
 ## Schema Naming (Gold Layer / `WH_Retail`)
 
@@ -82,6 +69,3 @@ Within the Gold Data Warehouse, tables are organized into logical schemas by bus
 ### Table Naming
 - **Dimension tables**: `dim_<entity>` (e.g. `dim_customers`, `dim_products`, `dim_date`)
 - **Fact tables**: `fact_<entity>` (e.g. `fact_orders`, `fact_inventory`)
-
-### Stored Procedure Naming
-- `SP_load_<table_name>` (e.g. `SP_load_dim_customers`, `SP_load_fact_orders`)
