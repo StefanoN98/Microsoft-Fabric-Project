@@ -59,7 +59,7 @@ https://github.com/<user>/<repo>/tree/main/globalretail-source-data
 
 ### Required Header
 
-To avoid GitHub blocking or throttling automated requests, a `User-Agent` header must be set on the HTTP connection:
+To avoid GitHub blocking or throttling automated requests, a `User-Agent` header must be set on the HTTP connection in Fabric:
 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 
