@@ -53,7 +53,7 @@ Three different source types were chosen to simulate realistic enterprise integr
 
 | Source | Type | Data | Rationale |
 |--------|------|------|-----------|
-| **Azure Data Lake Storage Gen2** | Batch file exports (CSV) | CRM (`customers`, `legacy_customers`) and ERP (`products`, `suppliers`, `inventory`) | Simulates nightly batch exports from CRM/ERP systems, landing in a Data Lake before ingestion |
+| **Azure Data Lake Storage Gen2** | Batch file exports (CSV) | CRM (`customers`, `legacy_customers`) and ERP (`products`, `suppliers`, `inventory`) | Simulates batch exports from CRM/ERP systems, landing in a Data Lake before ingestion |
 | **SQL Server** | OLTP relational database | `Orders`, `OrderDetails`, `OrderCampaign`, `Reviews` | Simulates the operational, transactional database of an e-commerce application |
 | **GitHub Repository** | HTTP connector (files) | `product_catalog.json`, `marketing_campaigns.csv`, `web_logs.json` | Simulates semi-structured data delivered via an external API / file distribution service (e.g. Product PIM, marketing platform, clickstream logs) |
 
