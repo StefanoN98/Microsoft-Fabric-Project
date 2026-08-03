@@ -38,15 +38,15 @@ stglobalretail
 └── landing
     │
     ├── crm
-    │   customers.csv
-    │   legacy_customers.csv
+    │   ├── customers.csv
+    │   └── legacy_customers.csv
     │
     ├── erp
-    │   inventory.csv
-    │   suppliers.csv
+    │   ├── inventory.csv
+    │   ├── suppliers.csv
     │   │
     │   └── Shortcut
-    │       products.csv
+    │       └── products.csv
     │
     └── marketing
 ```
