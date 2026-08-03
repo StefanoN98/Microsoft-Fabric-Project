@@ -29,11 +29,10 @@ All transactional/order-related data lives in this database, under a dedicated `
 GlobalRetail_OLTP
 |
 └── sales
-    |
     ├── Orders
     ├── OrderDetails
     ├── Reviews
-    ├── OrderCampaign
+    └── OrderCampaign
 ```
 
 
