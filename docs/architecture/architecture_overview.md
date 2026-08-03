@@ -49,7 +49,7 @@ Power BI Reports
 
 ## Source Systems
 
-Three different source types were deliberately chosen to simulate realistic enterprise integration patterns:
+Three different source types were chosen to simulate realistic enterprise integration patterns:
 
 | Source | Type | Data | Rationale |
 |--------|------|------|-----------|
