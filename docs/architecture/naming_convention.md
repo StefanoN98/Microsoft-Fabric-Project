@@ -1,0 +1,87 @@
+# Naming Conventions
+
+## Purpose
+
+Consistent naming across all Fabric artifacts makes the workspace self-explanatory: anyone browsing the workspace can immediately understand what type of object they are looking at and what layer/domain it belongs to, without opening it.
+
+These conventions are applied uniformly across Lakehouses, Warehouses, Pipelines, Notebooks, Environments, Semantic Models, and Reports.
+
+---
+
+## Artifact Prefixes
+
+| Artifact | Prefix | Example |
+|---|---|---|
+| Lakehouse | `LH_` | `LH_Retail` |
+| Warehouse | `WH_` | `WH_Retail` |
+| Pipeline | `PL_` | `PL_Ingest_CRM` |
+| Notebook | `NB_` | `NB_Silver_Orders` |
+| Semantic Model | `SM_` | `SM_Retail` 
+
+---
+
+## Applied Examples in This Project
+
+### Lakehouses
+- `LH_Bronze` — raw layer
+- `LH_Silver` — cleaned/standardized layer
+
+
+### Warehouse
+- `WH_Retail` — Gold layer, hosts dimension and fact tables
+
+### Pipelines
+- `PL_INGEST` — ingestion from Azure Data Lake Storage Gen2 (Bronze)
+- `PL_Silver` — Bronze → Silver transformation orchestration
+- `PL_Gold` — Silver → Gold loading orchestration (stored procedures)
+- `PL_Orchestration` — end-to-end trigger of all layer pipelines + semantic model refresh
+
+### Notebooks
+- `NB_Bronze_Files_To_Delta` — moves raw files into Bronze Delta tables
+- `NB_Bronze_Shortcut` — creates OneLake shortcuts via Fabric REST API
+- `NB_load_web_logs` — downloads large GitHub LFS file into Bronze
+- `NB_Silver_Analyze_Load_ERP_Tables` — ERP tables cleaning + quality checks
+- `NB_Silver_Analyze_Load_sales_tables` — SQL Server-sourced tables cleaning
+- `NB_Silver_Clean_Load_product_catalog` — nested JSON flattening (attributes/images)
+- `NB_Define_SQL_Gold_Datatype` — SQL Server datatype profiling for Gold DDL generation
+
+### Semantic Model
+- `SM_GlobalRetail` — Direct Lake semantic model built on top of `WH_Retail`
+
+---
+
+## Folder Organization (Notebooks & Pipelines)
+
+To avoid a flat, hard-to-navigate workspace, notebooks and pipelines are grouped by their functional stage:
+
+```text
+
+Pipelines
+│
+├── PL_INGEST_ADLS
+├── PL_INGEST_GITHUB
+├── PL_INGEST_SQLSERVER
+├── PL_BRONZE_TO_SILVER
+└── PL_SILVER_TO_GOLD
+```
+
+
+## Schema Naming (Gold Layer / `WH_Retail`)
+
+Within the Gold Data Warehouse, tables are organized into logical schemas by business domain instead of a single flat `dbo` schema:
+
+| Schema | Purpose |
+|---|---|
+| `_Shared_Dim` | Shared dimension tables used across multiple business domains (`dim_customers`, `dim_products`, `dim_date`) |
+| `_Transactions` | Order-related fact tables (`fact_orders`, `fact_orders_details`) |
+| `_Supply_Chain` | Inventory and supplier data (`fact_inventory`, `dim_suppliers`) |
+| `_Marketing` | Campaign, review, and web log data (`dim_campaign`, `fact_order_campaign`, `fact_web_logs`, `fact_reviews`) |
+
+> The leading underscore (`_`) is a deliberate convention to visually separate custom business schemas from Fabric's default (`dbo`) and system schemas in the object explorer.
+
+### Table Naming
+- **Dimension tables**: `dim_<entity>` (e.g. `dim_customers`, `dim_products`, `dim_date`)
+- **Fact tables**: `fact_<entity>` (e.g. `fact_orders`, `fact_inventory`)
+
+### Stored Procedure Naming
+- `SP_load_<table_name>` (e.g. `SP_load_dim_customers`, `SP_load_fact_orders`)
