@@ -32,14 +32,14 @@ In this project, the same pattern (small/medium structured or semi-structured fi
 ```text
 
 globalretail-source-data
+│
+└── ecommerce
+│   web_logs.json
 |
-+-- ecommerce
-|   web_logs.json
-|
-+-- marketing
+└── marketing
 |   marketing_campaigns.csv
 |
-+-- product_catalog
+└── product_catalog
     product_catalog.json
 ```
 
