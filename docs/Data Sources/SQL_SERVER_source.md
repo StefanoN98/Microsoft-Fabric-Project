@@ -25,7 +25,6 @@ All transactional/order-related data lives in this database, under a dedicated `
 - **Schema**: `sales`
 
 ```text
-
 GlobalRetail_OLTP
 |
 └── sales
