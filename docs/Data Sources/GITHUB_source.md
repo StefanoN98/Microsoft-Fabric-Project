@@ -30,17 +30,19 @@ In this project, the same pattern (small/medium structured or semi-structured fi
 ## Repository Structure
 
 ```text
-
 globalretail-source-data
 │
-└── ecommerce
-│   web_logs.json
+├── ecommerce
+|    |
+│    └── web_logs.json
 |
-└── marketing
-|   marketing_campaigns.csv
+├──  marketing
+|    |
+│    └── marketing_campaigns.csv
 |
-└── product_catalog
-    product_catalog.json
+├── product_catalog
+|     |
+|     └── product_catalog.json
 ```
 
 ## Fetching Files: `raw.githubusercontent.com`
