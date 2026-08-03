@@ -69,3 +69,10 @@ Within the Gold Data Warehouse, tables are organized into logical schemas by bus
 ### Table Naming
 - **Dimension tables**: `dim_<entity>` (e.g. `dim_customers`, `dim_products`, `dim_date`)
 - **Fact tables**: `fact_<entity>` (e.g. `fact_orders`, `fact_inventory`)
+
+## Related Documentation
+
+- [Architecture Overview](./architecture_overview.md)
+- [Bronze Layer](../bronze_layer.md)
+- [Silver Layer](../silver_layer.md)
+- [Gold Layer](../gold_layer.md)
