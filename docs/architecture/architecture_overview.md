@@ -64,10 +64,10 @@ Three different source types were chosen to simulate realistic enterprise integr
 ## Medallion Layers
 
 ### Bronze Layer
-Contains **raw data only**, ingested as-is from the three sources. Data is never modified at this stage — it exists purely for traceability and reprocessing capability.
+Contains **raw data only**, ingested as-is from the three sources. Data is never modified at this stage — it exists purely for traceability and reprocessing capability,hosted in a Fabric **Lakehouse**.
 
 ### Silver Layer
-Contains **cleaned, deduplicated, standardized data**, with parsed semi-structured fields (e.g. nested JSON attributes/arrays flattened into columns), data quality checks, and audit logging.
+Contains **cleaned, deduplicated, standardized data**, with parsed semi-structured fields (e.g. nested JSON attributes/arrays flattened into columns), data quality checks, and audit logging. Hosted in a Fabric **Lakehouse**.
 
 ### Gold Layer
 Contains the **business/analytical model**: a star schema with dimension and fact tables, built with explicit primary/foreign keys, hosted in a Fabric **Data Warehouse** and exposed through a **Direct Lake semantic model** for reporting.
@@ -82,7 +82,7 @@ Contains the **business/analytical model**: a star schema with dimension and fac
 | **Data Warehouse** (`WH_Retail`) | Hosts the Gold layer star schema (dimensions & facts) |
 | **Data Pipelines** | Orchestrate ingestion (metadata-driven) and layer-to-layer movement |
 | **PySpark Notebooks** | Handle complex transformations, semi-structured data flattening, and data quality profiling |
-| **Dataflow Gen2** | Handles CRM data cleaning (low-code transformation, Power Query) |
+| **Dataflow Gen2** | Handles data cleaning (low-code transformation, Power Query) |
 | **Semantic Model (Direct Lake)** | Exposes the Gold Warehouse model directly to Power BI without data duplication |
 | **On-premises Data Gateway** | Bridges the local SQL Server (OLTP) instance with Fabric cloud pipelines |
 
@@ -90,7 +90,7 @@ Contains the **business/analytical model**: a star schema with dimension and fac
 
 ## Design Principles
 
-- **Metadata-driven ingestion**: a single configuration file (`config_ingestion.csv`) drives what gets ingested, from where, in which format, and how — instead of hardcoding logic per source.
+- **Metadata-driven ingestion**: a single configuration file (`config_ingestion.csv`) drives what gets ingested, from where, in which format and how, instead of hardcoding logic per source.
 - **Separation of concerns per layer**: Bronze never transforms data; Silver never implements business logic; Gold never touches raw formats.
 - **Multiple transformation engines by use case**:
   - PySpark Notebooks for large volumes, complex/nested data structures, and audit logging
@@ -105,7 +105,7 @@ Contains the **business/analytical model**: a star schema with dimension and fac
 
 A single **Orchestration Pipeline** triggers the entire flow end-to-end, in sequence:
 
-1. `PL_INGEST_ADLS` → ingest raw data into Bronze
+1. `PL_INGEST` → ingest raw data into Bronze
 2. `Silver_Pipeline` → clean and move data into Silver
 3. `GOLD_Pipeline` → load dimensions (parallel, overwrite) → wait → load facts (parallel, incremental)
 4. **Semantic Model refresh** → updates `SM_GlobalRetail` so Power BI reports reflect the latest data
