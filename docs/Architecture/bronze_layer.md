@@ -1,0 +1,128 @@
+# Bronze Layer
+
+## Overview
+
+The Bronze layer is the first landing point for all data inside Microsoft Fabric. It hosts **raw data only**, ingested as-is from the three source systems (ADLS2, SQL Server, GitHub), with no cleaning, deduplication, or business logic applied.
+
+## Fabric Objects
+
+| Object | Type | Purpose |
+|---|---|---|
+| LH_Bronze | Lakehouse | Stores raw data as Delta tables (Tables/) and raw files (Files/) |
+| PL_INGEST | Pipeline | Metadata-driven ingestion from all three sources into Bronze |
+| NB_Bronze_Files_To_Delta | Notebook | Converts raw files landed in Files/ into Delta tables in Tables/ |
+| NB_Bronze_Shortcut | Notebook | Creates a OneLake Shortcut for products.csv via Fabric REST API |
+| NB_load_web_logs | Notebook | Downloads the large web_logs.json file directly from GitHub (Git LFS) |
+
+## Metadata-Driven Ingestion
+
+Rather than hardcoding ingestion logic per source and per file, a single **configuration file** (`config_ingestion.csv`) drives the entire pipeline. Each row describes one object to ingest: where it comes from, where it should land, in what format, and how it should be copied.
+
+This is the core design decision of the whole Bronze layer: **adding a new source file never requires touching the pipeline** — it only requires adding a new row to the configuration file. The pipeline logic stays generic and reusable, while the configuration file carries all the source-specific detail.
+
+The configuration captures, for every object:
+- which pipeline owns it
+- which source system it comes from (ADLS, GitHub, SQL Server)
+- which subfolder/domain it belongs to (crm, erp, marketing, ecommerce, sales)
+- its source name and destination name
+- its file format (csv, json, parquet)
+- whether it should be fully copied or exposed via a shortcut
+- whether it is currently enabled, so rows can be turned on/off without being deleted
+
+## Pipeline: PL_INGEST_ADLS
+
+The pipeline reads the configuration file once via a Lookup activity, then branches into three independent flows based on the source type. Each branch is responsible for a different source system and follows a different ingestion pattern, since each source has different constraints (file size, connector type, data structure).
+
+At a high level, the three branches converge at the end into a single notebook that promotes every raw file landed in Bronze `Files/` into proper Delta tables in Bronze `Tables/`.
+
+### Branch 1 — ADLS2
+
+This branch handles CRM and ERP batch files. A ForEach loop iterates over every enabled ADLS row, and for each one an If Condition checks how that specific file should be handled:
+
+- Most files are simply copied as-is from ADLS2 into the corresponding Bronze folder
+- One file (`products.csv`) is handled differently: instead of being copied, it is exposed via a **OneLake Shortcut** (see dedicated section below)
+
+This branching logic means the same loop can handle both "normal" files and the special shortcut case, driven entirely by a flag in the configuration file rather than by separate pipeline logic.
+
+### Branch 2 — GitHub
+
+This branch retrieves semi-structured files from a GitHub repository via the HTTP connector, simulating an external API/file distribution integration. Two of the three GitHub files (the product catalog and the marketing campaigns) are small enough to be copied directly through a standard Copy Activity.
+
+The third file, a large web log export (~276 MB, tracked via Git LFS), is excluded from this branch and handled separately by a dedicated notebook rather than a Copy Activity, since pipeline connectors are not well suited to very large single-file downloads. See the [GitHub Source](sources/github_source.md) documentation for the full reasoning behind this split and the specific connector configuration required.
+
+### Branch 3 — SQL Server
+
+This branch retrieves transactional data from the on-premises OLTP database, via an on-premises Data Gateway that bridges the local SQL Server instance with Fabric's cloud pipelines. Since this data is already structured and relational, it is written directly into Bronze `Tables/`, skipping the intermediate `Files/` landing step used by the other two sources — there is no benefit in landing already-structured relational data as a raw file first.
+
+See the [SQL Server Source](sources/sql_server_source.md) documentation for the gateway setup and connection details.
+
+## OneLake Shortcut: products.csv
+
+Instead of physically duplicating `products.csv` inside the Lakehouse, a **OneLake Shortcut** is created: a virtual reference that exposes the file inside `LH_Bronze/Files/` while it physically remains in ADLS2.
+
+This demonstrates a key OneLake capability: data does not need to be copied to be consumed across the platform. The shortcut is created programmatically via the **Fabric REST API**, rather than through the Fabric UI, to show an automatable and repeatable provisioning approach (as opposed to a manual, one-off UI action). The implementation lives in `NB_Bronze_Shortcut` and requires three identifiers to be resolved beforehand: the workspace ID, the target Lakehouse ID, and the ID of the existing ADLS2 connection registered in Fabric.
+
+## From Files to Delta Tables: NB_Bronze_Files_To_Delta
+
+Copy Activities land raw files inside the Lakehouse `Files/` area, but a `Files/` folder is not a queryable table — it is just raw file storage. A dedicated notebook is responsible for the final promotion step: reading every raw file described in the configuration, converting it into a proper **Delta table**, and writing it into `Tables/`.
+
+Along the way, the notebook also takes care of two structural necessities that have nothing to do with business logic:
+
+- **Column name sanitization**: Delta Lake forbids certain characters in column names (spaces and a handful of symbols). Since raw source files may contain such characters, they are normalized before the table is created, otherwise the write would simply fail.
+- **Audit columns**: every table gets two extra columns added at write time — an ingestion timestamp and the originating source file name — so that any record can later be traced back to exactly when and from where it entered the platform.
+
+This notebook is intentionally the **only** place in Bronze where a transformation-like operation happens (renaming columns), and even this is treated as a structural necessity, not a business rule — the data values themselves are never touched.
+
+## Resulting Bronze Tables
+
+| Table | Source |
+|---|---|
+| bronze_customers | ADLS2 (CRM) |
+| bronze_legacy_customers | ADLS2 (CRM) |
+| bronze_suppliers | ADLS2 (ERP) |
+| bronze_inventory | ADLS2 (ERP) |
+| bronze_products | ADLS2 (ERP, via Shortcut) |
+| bronze_product_catalog | GitHub |
+| bronze_marketing_campaigns | GitHub |
+| bronze_web_logs | GitHub (large file, via notebook) |
+| bronze_orders | SQL Server |
+| bronze_order_details | SQL Server |
+| bronze_reviews | SQL Server |
+| bronze_order_campaign | SQL Server |
+
+## Folder Structure in LH_Bronze
+
+    LH_Bronze
+    |
+    +-- Tables
+    |   +-- bronze_customers
+    |   +-- bronze_inventory
+    |   +-- bronze_legacy_customers
+    |   +-- bronze_marketing_campaigns
+    |   +-- bronze_order_campaign
+    |   +-- bronze_order_details
+    |   +-- bronze_orders
+    |   +-- bronze_product_catalog
+    |   +-- bronze_products
+    |   +-- bronze_reviews
+    |   +-- bronze_suppliers
+    |   +-- bronze_web_logs
+    |
+    +-- Files
+        +-- crm
+        +-- ecommerce
+        +-- erp
+        +-- marketing
+        +-- product_catalog
+        +-- shortcut_adls
+
+---
+
+## Related Documentation
+
+- Architecture Overview: architecture/README.md
+- Naming Conventions: architecture/01_naming_conventions.md
+- ADLS2 Source: sources/adls2_source.md
+- SQL Server Source: sources/sql_server_source.md
+- GitHub Source: sources/github_source.md
+- Silver Layer: silver_layer.md
