@@ -81,7 +81,7 @@ See [`NB_Bronze_Shortcut`](../../fabric_workspace/bronze_layer/notebooks/NB_Bron
 
 ## Related Documentation
 
-- [Architecture Overview](../architecture/README.md)
+- [Architecture Overview](../architecture_overview.md)
 - [Bronze Layer](../bronze_layer.md)
 - [SQL Server Source](sql_server_source.md)
 - [GitHub Source](github_source.md)
