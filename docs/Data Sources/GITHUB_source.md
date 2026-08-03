@@ -33,15 +33,12 @@ In this project, the same pattern (small/medium structured or semi-structured fi
 globalretail-source-data
 │
 ├── ecommerce
-|    |
 │    └── web_logs.json
 |
 ├──  marketing
-|    |
 │    └── marketing_campaigns.csv
 |
 ├── product_catalog
-|     |
 |     └── product_catalog.json
 ```
 
