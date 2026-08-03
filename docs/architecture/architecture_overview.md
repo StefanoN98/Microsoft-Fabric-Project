@@ -11,7 +11,6 @@ The goal of this project is to demonstrate a production-style data engineering p
 ## High-Level Architecture
 
 ```text
-
 Source Systems
 │
 ├── Azure Data Lake Storage Gen2   (batch master data exports)
@@ -49,7 +48,6 @@ Semantic Model (Direct Lake)
    │
    ▼ 
 Power BI Reports
-
 ```
 
 
