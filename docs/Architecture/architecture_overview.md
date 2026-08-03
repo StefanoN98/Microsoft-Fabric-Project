@@ -122,7 +122,7 @@ See [Gold Layer documentation](../gold_layer.md) and [Pipeline Orchestration](..
 
 ## Related Documentation
 
-- [Naming Conventions](01_naming_conventions.md)
+- [Naming Conventions](naming_conventions.md)
 - [Bronze Layer](../bronze_layer.md)
 - [Silver Layer](../silver_layer.md)
 - [Gold Layer](../gold_layer.md)
