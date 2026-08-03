@@ -38,11 +38,9 @@ GlobalRetail_OLTP
 
 
 ## Build Process
-
-The database was built following a deliberate, ordered roadmap — schema and constraints are defined **before** any data is loaded:
+The database is built following this process: schema and constraints are defined **before** any data is loaded
 
 ```text
-
 1. Database
 2. Schema
 3. Tables
