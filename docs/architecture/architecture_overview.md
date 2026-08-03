@@ -17,29 +17,37 @@ Source Systems
 ├── Azure Data Lake Storage Gen2   (batch master data exports)
 ├── SQL Server (OLTP)              (transactional data)
 └── GitHub Repository              (semi-structured / config data via HTTP connector)
-│
-▼
+
+               │
+               ▼
 Fabric Data Pipelines (metadata-driven ingestion)
-│
-▼
+
+               │
+               ▼
 LH_Bronze  (raw data, never modified)
-│
-▼
+
+               │
+               ▼
 PySpark Notebooks / Dataflow Gen2 (cleaning, standardization, deduplication)
-│
-▼
+
+               │
+               ▼
 LH_Silver  (clean, structured, quality-checked data)
-│
-▼
+
+               │
+               ▼
 PySpark Notebooks + Stored Procedures (business modeling)
-│                      
-▼                      
+
+               │
+               ▼                    
 WH_Retail
-│                      
-▼
+
+               │
+               ▼
 Semantic Model (Direct Lake)          
-│                      
-▼
+
+               │
+               ▼
 Power BI Reports
 
 ```
