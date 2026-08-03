@@ -38,8 +38,8 @@ globalretail-source-data
 ├──  marketing
 │    └── marketing_campaigns.csv
 |
-├── product_catalog
-|     └── product_catalog.json
+└── product_catalog
+      └── product_catalog.json
 ```
 
 ## Fetching Files: `raw.githubusercontent.com`
