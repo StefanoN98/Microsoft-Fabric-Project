@@ -4,7 +4,7 @@
 
 SQL Server hosts the **operational, transactional database** of the simulated e-commerce application. This source represents a live **OLTP system**, so the kind of database an application would read/write in real time.
 
-> **Important distinction**: this is not a Data Warehouse. It is modeled as an OLTP system, with normalized tables, constraints, and indexes typical of a transactional database. Never call it "the Data Warehouse" during a review or interview, it plays a completely different role in the architecture.
+> **Important distinction**: this is not a Data Warehouse. It is modeled as an OLTP system, with normalized tables, constraints, and indexes typical of a transactional database.
 
 ## Data Hosted
 
