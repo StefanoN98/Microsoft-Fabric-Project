@@ -4,20 +4,24 @@
 
 Azure Data Lake Storage Gen2 (ADLS2) acts as the **Landing Zone** for all batch file exports coming from the CRM and ERP source systems. It sits between the source systems and Microsoft Fabric, decoupling ingestion from the applications that originally produce the data.
 
+| Element | Value |
+|---|---|
+| Storage account | `stglobalretail` |
+| Container | `landing` |
+| Paths | `landing/crm/`, `landing/erp/`, `landing/marketing/` |
+
 ## Why ADLS Gen2 as a Landing Zone?
 
-Using a Landing Zone is not a Fabric-specific requirement, but a deliberate architectural choice:
+Using a Landing Zone is not a Fabric-specific requirement, but an architectural choice:
 
-- **Decouples** source systems from the analytics platform
+- **Decouples ingestion from source availability** isolates the analytics platform from source schedules, maintenance, and downtime.
 - **Preserves an original copy** of the raw data, independent of any transformation
 - **Facilitates reuse** by other downstream systems, not just Fabric
-- **Enables versioning and archiving** of historical exports
-- **Makes ingestion independent** from source application availability/schedules
 
 In short: ADLS Gen2 is not "just a folder", but the contractual boundary between source systems and the analytics platform.
 
 ## Data Hosted
-
+ Data is uploaded manually for this project (via Azure Portal upload), simulating what would normally be an automated export job from CRM/ERP systems in a real environment.
 | Domain | File | Description |
 |---|---|---|
 | CRM | `customers.csv` | Active customer master data |
@@ -27,8 +31,6 @@ In short: ADLS Gen2 is not "just a folder", but the contractual boundary between
 | ERP | `inventory.csv` | Warehouse inventory levels |
 
 > These are exactly the type of datasets that are typically exported every night in real enterprise environments:
-> - `CRM → CSV → Data Lake`
-> - `ERP → CSV → Data Lake`
 
 ## Storage Structure
 ```text
@@ -50,20 +52,6 @@ stglobalretail
     │
     └── marketing
 ```
-
-### Naming Convention
-
-| Element | Value |
-|---|---|
-| Storage account | `stglobalretail` |
-| Container | `landing` |
-| Paths | `landing/crm/`, `landing/erp/`, `landing/marketing/` |
-
-## Provisioning Notes
-
-- **Hierarchical namespace** must be enabled at storage account creation time (this is what makes it "Gen2" and enables directory/ACL semantics, required for OneLake shortcuts and Fabric integration).
-- **Access tier**: Hot (frequently accessed, everyday usage scenario).
-- Data is uploaded manually for this project (via Azure Portal upload), simulating what would normally be an automated export job from CRM/ERP systems in a real environment.
 
 ## `products.csv` — OneLake Shortcut
 
