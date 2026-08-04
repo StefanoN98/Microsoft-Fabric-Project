@@ -34,7 +34,6 @@ In short: ADLS Gen2 is not "just a folder", but the contractual boundary between
 
 ## Storage Structure
 ```text
-
 stglobalretail
 │
 └── landing
