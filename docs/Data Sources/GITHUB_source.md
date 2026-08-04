@@ -9,12 +9,7 @@ This source hosts semi-structured and configuration-style datasets: a product ca
 
 ## Why GitHub as a Source?
 
-This is not meant to represent "a code repository" in the traditional sense, it stands in for any external, file-based distribution channel. In a real enterprise environment, the same type of data could arrive from systems such as:
-
-- Shopify
-- Magento
-- Akeneo PIM
-- SAP Product Catalog
+This is not meant to represent "a code repository" in the traditional sense, it stands in for any external, file-based distribution channel. In a real enterprise environment, the same type of data could arrive from systems such as Shopify OR SAP.
 
 In this project, the same pattern (small/medium structured or semi-structured files, retrieved via HTTP) is simulated using a public GitHub repository, with files fetched via `raw.githubusercontent.com` URLs rather than the standard `github.com` web UI URLs.
 
