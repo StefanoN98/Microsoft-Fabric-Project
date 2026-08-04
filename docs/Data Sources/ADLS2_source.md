@@ -52,6 +52,14 @@ stglobalretail
     └── marketing
 ```
 
+## Ingestion Pattern in the Pipeline
+Within **PL_INGEST**, ADLS2 files follow this branch:
+- A Filter activity selects only rows from the configuration table where SourceType = ADLS
+- A ForEach loop iterates through the filtered records, evaluating each item via an If Condition activity:
+    - **Standard Copy:** If `CopyMode` is set to `COPY`, the pipeline executes a standard Copy Activity.
+    - **Shortcut Creation:** Otherwise (`CopyMode` is set to `SHORTCUT`), the pipeline triggers a dedicated notebook to create a shortcut (see below).
+
+
 ## `products.csv` — OneLake Shortcut
 
 Unlike the other ERP files (`suppliers.csv`, `inventory.csv`), `products.csv` is **not physically copied** into the Bronze Lakehouse. Instead, a **OneLake Shortcut** is created, pointing directly to its location in ADLS2 (`landing/erp/Shortcut/products.csv`).
