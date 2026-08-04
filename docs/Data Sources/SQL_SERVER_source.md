@@ -48,9 +48,7 @@ The database is built following this process: schema and constraints are defined
 7. Database testing
 8. Fabric connection
 ```
-
-Why build constraints before loading data?
-In a real environment, a database schema is defined before being populated. If a record violates a business rule, it must fail at load time, this is intentional, as it later allows demonstrating how the Fabric pipelines handle errors and "dirty" data during ingestion.
+I set up the database schema, tables, and constraints before loading the data to ensure that data is loaded correctly and to prevent errors later on in the pipeline
 
 
 ## Constraints & Business Rules
