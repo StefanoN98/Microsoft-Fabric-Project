@@ -19,7 +19,7 @@ In this project, the same pattern (small/medium structured or semi-structured fi
 |---|---|---|---|
 | `product_catalog/` | `product_catalog.json` | JSON | Product catalog data, small and infrequently updated, ideal to read directly via URL |
 | `marketing/` | `marketing_campaigns.csv` | CSV | Marketing campaign master data |
-| `ecommerce/` | `web_logs.json` | JSON | Web/clickstream logs, large file, requires special handling (see below) |
+| `ecommerce/` | `web_logs.json` | JSON | Web logs, large file, requires special handling (see below) |
 
 
 ## Repository Structure
@@ -53,7 +53,7 @@ https://github.com/<user>/<repo>/tree/main/globalretail-source-data
 
 ### Required Header
 
-To avoid GitHub blocking or throttling automated requests, a `User-Agent` header must be set on the HTTP connection in Fabric:
+To avoid GitHub blocking or throttling automated requests, a `User-Agent` header must be set on the HTTP connection in the Fabric pipeline:
 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 
@@ -100,4 +100,4 @@ product_catalog.json contains nested structures once loaded into Bronze:
 - attributes: a struct field with sub-fields (color, warranty_months, weight_kg)
 - images: an array of URL strings
 
-These are not flattened at ingestion time — they remain as-is in Bronze (raw, unmodified) and are only flattened during Silver layer processing, via a dedicated recursive cleaning function. See Silver Layer for details.
+These are not flattened at ingestion time, they remain as-is in Bronze (raw, unmodified) and are only flattened during Silver layer processing, via a dedicated recursive cleaning function. See Silver Layer for details.
