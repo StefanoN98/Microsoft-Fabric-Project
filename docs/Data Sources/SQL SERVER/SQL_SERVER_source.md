@@ -8,7 +8,7 @@ SQL Server hosts the **operational, transactional database** of the simulated e-
 
 ## Data Hosted
 
-All transactional/order-related data lives in this database, under a dedicated `sales` schema:
+All transactional/order-related data lives in a SQL Server database, under a dedicated `sales` schema:
 
 <img src="../../Images/bronze/SQL_SERVER/sql_server_tables.png" alt="Data Source Schema" width="300"/>
 
