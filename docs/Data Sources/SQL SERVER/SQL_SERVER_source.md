@@ -48,36 +48,6 @@ In particular:
 
 - [Script 4](https://github.com/StefanoN98/Microsoft-Fabric-Project/blob/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts/04_script_constraints_%26_business_rules_tables.sql) applies referential integrity constraints and business rules. Foreign keys are defined between related tables, while CHECK constraints enforce data quality rules such as valid ratings, positive quantities, non-negative prices and order totals, and supported currency values.
 
-
-
-```
-
-## Data Loading
-Data is loaded via BULK INSERT / OPENROWSET from local files, simulating an initial seed load of the OLTP system:
-
-```sql
-
-INSERT INTO sales.Reviews (ReviewID, CustomerID, ProductID, OrderID, Rating, ReviewText)
-SELECT ReviewID, CustomerID, ProductID, OrderID, Rating, ReviewText
-FROM OPENROWSET(BULK 'path/to/reviews.json', SINGLE_CLOB) AS j
-CROSS APPLY OPENJSON(BulkColumn)
-WITH (
-    ReviewID    INT           '$.review_id',
-    CustomerID  NVARCHAR(20)  '$.customer_id',
-    ProductID   NVARCHAR(20)  '$.product_id',
-    OrderID     NVARCHAR(100) '$.order_id',
-    Rating      TINYINT       '$.rating'
-);
-
-```
-
-See full scripts in infrastructure/sql_server/
-- 01_script_create_tables_SSMS.sql
-- 02_script_constraints_business_rules_tables.sql
-- 03_set_index_tables.sql
-- 04_script_insert_bulk.sql
-
-
  ## Connecting SQL Server to Fabric
  Since SQL Server runs on-premises (or in this project's case, on a local machine) and Fabric is cloud-based, an On-premises Data Gateway is required to bridge the two environments.
 
