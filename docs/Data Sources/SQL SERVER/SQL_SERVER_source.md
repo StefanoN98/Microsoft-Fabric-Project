@@ -51,7 +51,7 @@ In particular:
  ## Connecting SQL Server to Fabric
  Since SQL Server runs on-premises (or in this project's case, on a local machine) and Fabric is cloud-based, an On-premises Data Gateway is required to bridge the two environments.
 
-High-level steps:
+So to guarantee the connection:
 
 1. Install the On-premises Data Gateway (Standard mode) on the machine hosting SQL Server
 2. Register the gateway under the Fabric-linked account
