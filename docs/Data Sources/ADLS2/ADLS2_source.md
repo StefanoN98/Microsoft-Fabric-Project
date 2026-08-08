@@ -10,6 +10,10 @@ Azure Data Lake Storage Gen2 (ADLS2) acts as the **Landing Zone** for all batch 
 | Container | `landing` |
 | Paths | `landing/crm/`, `landing/erp/`, `landing/marketing/` |
 
+![Data Source Schema](../../Images/bronze/ADLS2/storage_center.png)
+<img src="../../Images/bronze/ADLS2/container.png" alt="Data Source Schema" width="600"/>
+![Data Source Schema](../../Images/bronze/ADLS2/landing.png)
+
 ## Why ADLS Gen2 as a Landing Zone?
 
 Using a Landing Zone is not a Fabric-specific requirement, but an architectural choice:
