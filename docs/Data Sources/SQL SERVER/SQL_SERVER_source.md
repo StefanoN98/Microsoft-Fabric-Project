@@ -36,21 +36,6 @@ GlobalRetail_OLTP
     └── OrderCampaign
 ```
 
-## Build Process
-The database is built following this process: schema and constraints are defined **before** any data is loaded
-
-```text
-1. Database
-2. Schema
-3. Tables
-4. Constraints
-5. Indexes
-6. Data loading
-7. Database testing
-8. Fabric connection
-```
-I set up the database schema, tables, and constraints before loading the data to ensure that data is loaded correctly and to prevent errors later on in the pipeline
-
 
 ## Constraints & Business Rules
 Referential integrity and business rules are enforced at the database level:
