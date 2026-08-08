@@ -1,0 +1,501 @@
+SupplierID,SupplierName,Country,Rating,ContractType
+S0001,Carroll Inc,Equatorial Guinea,3.3,Standard
+S0002,Simpson Group,Latvia,3.5,Premium
+S0003,"Gray, Clark and Freeman",Uganda,4.5,Premium
+S0004,Reynolds-Farmer,Afghanistan,4.3,Standard
+S0005,"Griffin, Griffith and Perez",Western Sahara,3.2,Standard
+S0006,Valenzuela Inc,Angola,4.8,Premium
+S0007,Banks Inc,Wallis and Futuna,3.9,Standard
+S0008,Parks-Costa,Saint Kitts and Nevis,4.4,Premium
+S0009,Rose Group,Wallis and Futuna,4.4,Standard
+S0010,Tran-Reed,Philippines,4.2,Standard
+S0011,Hodges LLC,Vanuatu,4.8,Standard
+S0012,Butler PLC,Uzbekistan,3.0,Strategic
+S0013,"Garcia, Soto and Cummings",French Polynesia,4.1,Premium
+S0014,Paul Ltd,Rwanda,4.4,Premium
+S0015,"Mayer, Henderson and Greer",Paraguay,4.5,Strategic
+S0016,Turner PLC,Turkmenistan,3.4,Premium
+S0017,Mathis-Wagner,Namibia,4.9,Strategic
+S0018,Castillo Ltd,South Georgia and the South Sandwich Islands,3.5,Standard
+S0019,Perry-Thompson,Mexico,4.4,Premium
+S0020,"Parsons, Rojas and Miller",Panama,4.9,Standard
+S0021,"Rodriguez, Martin and Larsen",Heard Island and McDonald Islands,3.8,Strategic
+S0022,Oconnor-Harrison,Gambia,4.8,Standard
+S0023,"Charles, Mendez and Lane",Oman,3.4,Strategic
+S0024,Jackson and Sons,American Samoa,4.7,Standard
+S0025,Ryan PLC,Djibouti,4.5,Strategic
+S0026,Palmer-Farley,Morocco,4.9,Strategic
+S0027,Stevens-Adams,Mexico,4.9,Premium
+S0028,"Krueger, Smith and Bowers",Swaziland,4.0,Strategic
+S0029,"Hunt, Anderson and Waters",Costa Rica,3.4,Premium
+S0030,Herring-Castillo,Haiti,4.2,Premium
+S0031,"Spencer, Everett and Gutierrez",Suriname,4.7,Strategic
+S0032,Perry-Smith,Mauritius,3.8,Standard
+S0033,"Buchanan, Rivera and Greene",Spain,4.0,Strategic
+S0034,Reid PLC,Myanmar,4.6,Premium
+S0035,Callahan PLC,South Georgia and the South Sandwich Islands,4.3,Premium
+S0036,Johnson-Acevedo,Barbados,4.1,Strategic
+S0037,Parrish Group,American Samoa,4.6,Strategic
+S0038,Wright-Rodriguez,Nigeria,3.7,Premium
+S0039,Cooper Inc,Chad,4.3,Standard
+S0040,Scott and Sons,Palestinian Territory,4.6,Strategic
+S0041,Wong-Phillips,Reunion,4.7,Premium
+S0042,Crawford-Wilson,Georgia,4.0,Standard
+S0043,Cooper-Hogan,Eritrea,3.9,Premium
+S0044,King Ltd,Malawi,4.4,Strategic
+S0045,Sheppard Group,Svalbard & Jan Mayen Islands,4.2,Premium
+S0046,Perez Group,Cameroon,4.3,Standard
+S0047,Higgins and Sons,Kiribati,4.0,Standard
+S0048,"Hunter, Simmons and Collier",Norfolk Island,4.5,Strategic
+S0049,"Black, Walker and Wong",Indonesia,4.8,Strategic
+S0050,"Johnston, Morris and Mccoy",Bahamas,3.5,Strategic
+S0051,"Evans, Faulkner and Hutchinson",Gambia,3.7,Strategic
+S0052,Garrison LLC,United States Virgin Islands,3.7,Premium
+S0053,Manning-Butler,El Salvador,4.3,Strategic
+S0054,Smith Inc,Nauru,4.9,Standard
+S0055,Rivers PLC,Kuwait,3.8,Strategic
+S0056,Carey Ltd,Nigeria,4.0,Standard
+S0057,"Johnson, Gonzalez and Garcia",Montserrat,4.0,Strategic
+S0058,"Mosley, Vargas and Vasquez",Wallis and Futuna,3.4,Standard
+S0059,"Price, Gordon and Smith",New Zealand,4.0,Premium
+S0060,Yoder-Smith,Cook Islands,4.1,Standard
+S0061,Shepherd-Elliott,Burkina Faso,4.9,Premium
+S0062,Patterson-Adams,Bhutan,4.0,Premium
+S0063,Randolph-Cooper,Turkmenistan,3.8,Standard
+S0064,"Ferguson, Tate and Patel",Bahrain,4.1,Strategic
+S0065,"Williams, Anderson and Jackson",Mauritania,4.6,Premium
+S0066,Adams LLC,Netherlands Antilles,3.9,Standard
+S0067,"Randall, Richardson and Peterson",French Guiana,4.6,Strategic
+S0068,Dillon PLC,Slovakia (Slovak Republic),3.4,Strategic
+S0069,"Clay, Taylor and Arnold",Bosnia and Herzegovina,3.4,Standard
+S0070,Williams-Jones,Tonga,4.6,Premium
+S0071,Poole LLC,Brazil,3.1,Strategic
+S0072,"Matthews, Howe and Jones",Mexico,3.1,Standard
+S0073,Knight LLC,Haiti,3.9,Premium
+S0074,Elliott-Buckley,Kuwait,3.5,Standard
+S0075,Rodriguez-Williams,French Polynesia,4.6,Standard
+S0076,Austin Inc,Bermuda,3.7,Standard
+S0077,Wilson-Dyer,Armenia,3.3,Premium
+S0078,Allen PLC,Italy,4.1,Standard
+S0079,Wilson and Sons,Pitcairn Islands,4.3,Strategic
+S0080,Moore Inc,Jordan,4.4,Premium
+S0081,Drake-Daniels,Svalbard & Jan Mayen Islands,4.4,Premium
+S0082,Pierce-Dawson,Germany,3.9,Standard
+S0083,Clark LLC,Armenia,3.6,Premium
+S0084,Smith LLC,Saint Kitts and Nevis,3.8,Standard
+S0085,"Flores, Myers and Ross",Bahrain,3.5,Premium
+S0086,Booker-Booker,Bouvet Island (Bouvetoya),4.8,Strategic
+S0087,Lewis-Williamson,Uganda,5.0,Strategic
+S0088,"Dillon, Harrison and Kelly",Cocos (Keeling) Islands,3.9,Standard
+S0089,"Clark, Gonzalez and Ward",Svalbard & Jan Mayen Islands,3.5,Premium
+S0090,Davis-Mullins,Bermuda,3.3,Strategic
+S0091,"Andrews, Morgan and Perez",Gambia,4.9,Premium
+S0092,Murphy LLC,Somalia,4.4,Strategic
+S0093,"Barry, Turner and Cook",Mayotte,3.9,Standard
+S0094,"Riley, Carlson and Sanchez",Angola,5.0,Strategic
+S0095,Morales LLC,Micronesia,4.6,Strategic
+S0096,Daniel Inc,North Macedonia,3.9,Strategic
+S0097,Carter LLC,Lithuania,4.3,Premium
+S0098,Huffman-Moore,Macao,4.3,Premium
+S0099,Jones-Avery,China,4.3,Premium
+S0100,Parsons and Sons,Swaziland,3.1,Premium
+S0101,Torres-Fletcher,Syrian Arab Republic,3.3,Standard
+S0102,"Carter, English and Thomas",United States Minor Outlying Islands,4.8,Premium
+S0103,"Johnson, Stewart and Leach",Spain,3.1,Standard
+S0104,"Meadows, Pittman and Francis",Portugal,3.6,Premium
+S0105,Thompson Group,Mauritania,4.5,Premium
+S0106,Williams Ltd,Egypt,4.1,Standard
+S0107,Strickland-Fleming,Kiribati,3.0,Standard
+S0108,Dunn-Weaver,Thailand,4.2,Standard
+S0109,"Chavez, Foster and Morgan",Eritrea,4.9,Strategic
+S0110,Johnson-Lucas,Israel,3.9,Strategic
+S0111,"Smith, Holt and Carpenter",Nauru,4.2,Standard
+S0112,Taylor LLC,Indonesia,3.8,Premium
+S0113,"Morales, Salazar and Hall",Albania,3.2,Strategic
+S0114,Rice PLC,Uganda,4.3,Premium
+S0115,"Knapp, Conrad and Fowler",Czech Republic,4.2,Premium
+S0116,Edwards Ltd,Lesotho,3.2,Strategic
+S0117,Marquez LLC,Monaco,3.8,Strategic
+S0118,"Meadows, Hardin and Hill",Oman,4.0,Premium
+S0119,Williams Inc,Serbia,4.2,Premium
+S0120,"Brewer, Wood and Hunt",Somalia,4.8,Standard
+S0121,Collins Ltd,French Southern Territories,3.3,Premium
+S0122,"Watson, Haynes and Doyle",Nepal,4.6,Strategic
+S0123,Chase PLC,Malaysia,4.6,Premium
+S0124,"Bennett, Moore and Simmons",Western Sahara,3.9,Premium
+S0125,"Ball, Casey and Simpson",India,4.3,Premium
+S0126,"Walsh, Cruz and Bruce",Mayotte,4.9,Premium
+S0127,"Gamble, Warren and Davis",Equatorial Guinea,4.8,Strategic
+S0128,"Garcia, Doyle and Miller",Burundi,4.1,Strategic
+S0129,"Wilkinson, Keller and Graves",Kenya,3.5,Strategic
+S0130,Maddox Group,Wallis and Futuna,3.1,Standard
+S0131,Sanders-Kent,Kazakhstan,3.3,Strategic
+S0132,Dean Group,Croatia,3.4,Premium
+S0133,Reynolds PLC,Ireland,4.2,Premium
+S0134,Guerrero LLC,Egypt,3.7,Premium
+S0135,Brady-Smith,Comoros,3.2,Standard
+S0136,"Gonzales, Smith and Burton",New Caledonia,4.7,Strategic
+S0137,Conley and Sons,China,4.6,Strategic
+S0138,Hernandez-Gonzalez,Georgia,4.8,Standard
+S0139,"Todd, Collier and Griffin",Tokelau,4.2,Standard
+S0140,Gardner Group,Italy,3.6,Premium
+S0141,Hammond PLC,Turkmenistan,3.1,Standard
+S0142,Harris-Cochran,United Kingdom,4.7,Premium
+S0143,Wilson Ltd,American Samoa,3.2,Strategic
+S0144,"Phillips, Craig and Ramsey",Pakistan,4.6,Premium
+S0145,Jones LLC,Montserrat,3.2,Strategic
+S0146,Kim-Byrd,Senegal,3.4,Standard
+S0147,"Morris, Martinez and Robbins",Guernsey,4.9,Premium
+S0148,Ryan-Morgan,Saint Martin,4.8,Strategic
+S0149,"Duncan, Wilson and Hardin",Hong Kong,4.1,Standard
+S0150,Hawkins LLC,North Macedonia,3.9,Premium
+S0151,"Bowen, Rodgers and Chandler",Congo,3.2,Standard
+S0152,Burke-Black,Vietnam,4.7,Standard
+S0153,"Joseph, Huerta and Warner",Korea,4.2,Standard
+S0154,"Barnett, Gonzalez and Fox",Philippines,3.2,Standard
+S0155,Riley-Waller,Guadeloupe,4.7,Standard
+S0156,"Silva, Gross and Hurst",San Marino,3.4,Strategic
+S0157,Vasquez Ltd,Egypt,3.8,Standard
+S0158,"Rasmussen, Carter and Smith",Saint Helena,3.9,Strategic
+S0159,"Moore, Maxwell and Sanders",Faroe Islands,3.5,Strategic
+S0160,Saunders PLC,Algeria,4.7,Premium
+S0161,Durham-Yates,Isle of Man,4.8,Premium
+S0162,"Stephens, Hernandez and Whitaker",Libyan Arab Jamahiriya,4.6,Strategic
+S0163,Mcdonald Inc,Faroe Islands,4.8,Premium
+S0164,"Garcia, Garza and Jones",Bangladesh,4.1,Strategic
+S0165,"Ramos, Martin and Page",Central African Republic,4.0,Standard
+S0166,"Davis, Fields and Hill",Gabon,3.4,Premium
+S0167,Rice and Sons,Turks and Caicos Islands,3.1,Standard
+S0168,Adams-Jones,Switzerland,4.6,Premium
+S0169,"Hopkins, Mcdonald and Grant",Australia,4.5,Premium
+S0170,Phillips Ltd,Rwanda,3.9,Premium
+S0171,"Nelson, Lynch and Hall",Monaco,3.8,Standard
+S0172,Jackson-Clarke,Tonga,4.8,Strategic
+S0173,"Rivera, Walker and Stuart",Romania,4.9,Standard
+S0174,Anthony Inc,Timor-Leste,3.5,Strategic
+S0175,"Powell, Reilly and Fitzpatrick",Egypt,4.6,Strategic
+S0176,Lee-Garrett,Chad,4.7,Premium
+S0177,"Wallace, Gentry and Chandler",New Caledonia,4.3,Premium
+S0178,Stevens-Martin,Slovakia (Slovak Republic),3.4,Standard
+S0179,English Group,Guyana,3.6,Standard
+S0180,Potter-Allen,Saint Barthelemy,3.7,Premium
+S0181,Higgins LLC,Bangladesh,3.2,Premium
+S0182,Perez LLC,Lithuania,3.2,Strategic
+S0183,Moses Inc,Azerbaijan,4.3,Standard
+S0184,"Johnson, Goodwin and Vega",Lithuania,3.8,Premium
+S0185,"Rice, Ramsey and Eaton",Kenya,3.1,Standard
+S0186,Alvarado-Hill,New Zealand,3.6,Strategic
+S0187,"Thompson, Walker and Hall",Korea,4.8,Premium
+S0188,Christensen-Mcpherson,Dominica,3.5,Standard
+S0189,Ford-Carpenter,Croatia,4.1,Strategic
+S0190,Espinoza-Rivera,Nauru,4.6,Standard
+S0191,Blankenship Inc,Aruba,3.5,Standard
+S0192,Salinas Group,Ghana,4.6,Premium
+S0193,Charles-Mitchell,Congo,3.1,Strategic
+S0194,Moore-Holloway,Oman,4.7,Strategic
+S0195,Leon Inc,American Samoa,3.2,Strategic
+S0196,Thomas-Ortega,Azerbaijan,3.0,Premium
+S0197,"Gray, Anderson and Ford",Tajikistan,4.0,Standard
+S0198,Escobar-Johnson,Bahamas,3.2,Premium
+S0199,"Pittman, Williams and Hill",British Indian Ocean Territory (Chagos Archipelago),3.2,Strategic
+S0200,Davis-Johnson,Northern Mariana Islands,3.3,Standard
+S0201,Garner Ltd,Svalbard & Jan Mayen Islands,5.0,Premium
+S0202,Alvarado Group,Greenland,3.6,Strategic
+S0203,"Adams, Green and Reid",Ecuador,4.0,Strategic
+S0204,Matthews PLC,China,3.6,Standard
+S0205,Patterson-Wolfe,Northern Mariana Islands,3.3,Strategic
+S0206,"Costa, Stein and Payne",Mauritania,3.1,Premium
+S0207,Dawson PLC,Jamaica,4.6,Strategic
+S0208,"Jones, Adams and Bishop",Sao Tome and Principe,4.6,Strategic
+S0209,King Inc,Canada,4.7,Strategic
+S0210,Sellers Group,Timor-Leste,5.0,Standard
+S0211,Brown Inc,United States Minor Outlying Islands,3.4,Premium
+S0212,"Harrison, Wood and Rollins",Armenia,4.1,Standard
+S0213,Schmidt Group,Papua New Guinea,4.4,Strategic
+S0214,Woodard Ltd,United Arab Emirates,3.5,Standard
+S0215,Johnson-Warren,Bermuda,4.4,Premium
+S0216,Mcbride-Miller,Antigua and Barbuda,4.6,Strategic
+S0217,Brown-Green,Saint Pierre and Miquelon,3.5,Premium
+S0218,Green Group,Sri Lanka,4.7,Premium
+S0219,Foley LLC,Bhutan,3.0,Premium
+S0220,Skinner-Shaw,Costa Rica,3.3,Premium
+S0221,Leblanc-Hicks,India,3.0,Strategic
+S0222,"Olson, Anderson and Briggs",Malta,4.9,Strategic
+S0223,"Ball, Davenport and Haynes",Mauritania,3.0,Strategic
+S0224,Prince LLC,Samoa,3.7,Standard
+S0225,Gonzalez Group,Mali,4.2,Standard
+S0226,Davis-Reed,Morocco,3.5,Premium
+S0227,Williams Ltd,Martinique,3.8,Premium
+S0228,Butler-Flores,Faroe Islands,3.3,Standard
+S0229,Goodman-Meyer,Algeria,3.5,Standard
+S0230,"Martinez, Stewart and Acosta",Slovenia,3.4,Premium
+S0231,Berry-Hayes,Fiji,4.0,Strategic
+S0232,Gibson-Diaz,Saint Vincent and the Grenadines,4.8,Strategic
+S0233,Ochoa-Schaefer,Uzbekistan,4.3,Standard
+S0234,"Solis, Taylor and Mills",Morocco,3.5,Premium
+S0235,Bowers-Warner,San Marino,4.4,Standard
+S0236,Ward-Dunlap,Norway,4.4,Premium
+S0237,Powell-Marshall,Guam,4.1,Strategic
+S0238,"Romero, Johnson and Wright",Cyprus,4.8,Premium
+S0239,"Anderson, Rodriguez and Miranda",Wallis and Futuna,4.9,Standard
+S0240,"Harvey, Cain and Irwin",Pitcairn Islands,3.1,Standard
+S0241,Espinoza-Harris,Bangladesh,4.5,Strategic
+S0242,"Duncan, Davidson and Wyatt",South Africa,4.8,Standard
+S0243,Day and Sons,Malawi,4.0,Standard
+S0244,Johnson-Richardson,Tanzania,3.6,Strategic
+S0245,Page-Campbell,Uganda,3.6,Strategic
+S0246,George and Sons,Jamaica,3.7,Strategic
+S0247,Lowe-Stephens,Western Sahara,4.4,Premium
+S0248,Yates Ltd,Barbados,4.2,Standard
+S0249,Russell-Smith,Martinique,4.8,Strategic
+S0250,Robertson-Tucker,Iraq,4.1,Standard
+S0251,"Andrade, Hogan and Richards",Armenia,3.3,Premium
+S0252,Rosales-Ellis,Comoros,3.4,Strategic
+S0253,Dominguez-May,Mauritius,4.4,Standard
+S0254,Short PLC,Tuvalu,4.0,Premium
+S0255,"Stewart, Frank and Newman",Micronesia,4.4,Premium
+S0256,Fox-Weaver,Svalbard & Jan Mayen Islands,3.8,Standard
+S0257,"Ortiz, Soto and Parker",Gabon,4.1,Standard
+S0258,Hunter PLC,Burundi,4.0,Standard
+S0259,"Barton, Villegas and King",Algeria,4.6,Strategic
+S0260,Fitzgerald-Knight,Heard Island and McDonald Islands,3.2,Strategic
+S0261,Morales-Zuniga,Ukraine,4.8,Standard
+S0262,"Smith, Davis and Davis",Albania,4.9,Strategic
+S0263,Adams-Nelson,Slovenia,4.7,Strategic
+S0264,Fields-Phelps,Seychelles,4.4,Standard
+S0265,Price-Lara,Liberia,3.9,Standard
+S0266,Thomas-Hernandez,China,4.9,Premium
+S0267,Richardson-Martinez,Solomon Islands,4.9,Premium
+S0268,Herring-Gutierrez,Wallis and Futuna,3.8,Premium
+S0269,"Mitchell, Fisher and Hill",Grenada,3.9,Strategic
+S0270,Lewis-Gallegos,Zambia,4.8,Standard
+S0271,Moran-Davis,Bulgaria,3.2,Strategic
+S0272,Levy and Sons,Saint Lucia,4.1,Standard
+S0273,Garcia and Sons,Lesotho,4.3,Premium
+S0274,Ross Ltd,Colombia,3.5,Strategic
+S0275,Davis PLC,Zimbabwe,4.1,Standard
+S0276,Dunn PLC,Jamaica,4.1,Strategic
+S0277,Williams-Pearson,Vanuatu,3.0,Strategic
+S0278,Navarro Ltd,Italy,4.9,Standard
+S0279,"Figueroa, Carney and Cohen",Christmas Island,4.7,Standard
+S0280,Trujillo-Padilla,Australia,3.3,Standard
+S0281,Rhodes Inc,Tonga,4.1,Premium
+S0282,Martinez-West,Pitcairn Islands,3.6,Premium
+S0283,"Jimenez, Long and Obrien",Lesotho,4.7,Premium
+S0284,Hernandez PLC,United Kingdom,4.6,Standard
+S0285,"Harris, Meyer and Butler",Tuvalu,4.1,Premium
+S0286,"Roberts, Vasquez and Jacobson",Mayotte,3.8,Standard
+S0287,Kramer PLC,Guadeloupe,4.5,Strategic
+S0288,Garcia-Todd,Saint Lucia,4.8,Standard
+S0289,"Reed, Mcclure and Fletcher",Azerbaijan,3.6,Standard
+S0290,"Garrett, Evans and Strong",Bolivia,4.8,Standard
+S0291,Romero LLC,Romania,3.2,Strategic
+S0292,Jenkins and Sons,Equatorial Guinea,3.0,Premium
+S0293,Russell Ltd,Netherlands Antilles,4.9,Strategic
+S0294,Patel PLC,Malawi,4.9,Standard
+S0295,Bautista LLC,Fiji,3.2,Premium
+S0296,Dominguez-Adams,Croatia,4.1,Premium
+S0297,Richardson-Ruiz,Guadeloupe,3.9,Strategic
+S0298,Obrien and Sons,Saint Vincent and the Grenadines,3.7,Strategic
+S0299,"Benson, Nichols and Brown",Greece,3.6,Standard
+S0300,"Vaughn, Newman and Cain",Uganda,3.9,Premium
+S0301,Stewart Group,Lesotho,3.7,Strategic
+S0302,Wilson-Clay,Qatar,3.8,Strategic
+S0303,Walker-Reid,Switzerland,4.4,Premium
+S0304,"Williams, Jackson and Wilson",Mongolia,3.2,Premium
+S0305,Shaw Ltd,Turks and Caicos Islands,3.8,Strategic
+S0306,Henderson-Smith,Angola,3.0,Premium
+S0307,Short-Robinson,Samoa,4.3,Strategic
+S0308,Ramirez Ltd,Tokelau,4.8,Strategic
+S0309,Adams-Higgins,Hong Kong,4.0,Premium
+S0310,Martinez LLC,Burundi,4.2,Strategic
+S0311,King and Sons,Pitcairn Islands,3.8,Strategic
+S0312,"Williams, Jones and Hardy",Bosnia and Herzegovina,4.4,Premium
+S0313,Stewart-Adams,Australia,4.4,Premium
+S0314,Johnson-Taylor,Iran,4.2,Strategic
+S0315,Peck-Little,Dominican Republic,3.4,Strategic
+S0316,Frazier LLC,Algeria,3.0,Premium
+S0317,"Beasley, Haley and Rodriguez",Uzbekistan,4.2,Premium
+S0318,"Ramsey, Martinez and Ho",Faroe Islands,3.7,Strategic
+S0319,Davis-Ray,Saint Kitts and Nevis,4.2,Strategic
+S0320,"Alvarez, Barnes and Peck",Gabon,4.4,Strategic
+S0321,Chen PLC,Burkina Faso,3.1,Strategic
+S0322,Greene Inc,China,3.5,Strategic
+S0323,Lewis Group,Falkland Islands (Malvinas),3.6,Standard
+S0324,"Smith, Ryan and Duffy",Estonia,3.8,Strategic
+S0325,Martinez-Fletcher,Samoa,3.3,Premium
+S0326,Jones-Madden,Guyana,4.6,Standard
+S0327,"Peters, Brock and Romero",Mozambique,4.5,Strategic
+S0328,Montgomery Group,Pitcairn Islands,3.0,Premium
+S0329,Moore PLC,Cambodia,4.6,Premium
+S0330,"Koch, Robinson and Skinner",Thailand,4.7,Strategic
+S0331,Diaz-Carter,Cape Verde,3.6,Premium
+S0332,Whitaker-Sullivan,Netherlands Antilles,4.7,Premium
+S0333,Nelson Ltd,Poland,3.3,Strategic
+S0334,"Munoz, Smith and Farley",Uruguay,3.1,Strategic
+S0335,"Anderson, Burgess and Dunlap",Bolivia,3.2,Strategic
+S0336,Johnson-Reynolds,Philippines,3.8,Premium
+S0337,Hill-Wood,Iraq,3.1,Premium
+S0338,"Murray, Garcia and Maxwell",Oman,3.0,Strategic
+S0339,"Terry, Burnett and Decker",Namibia,4.4,Standard
+S0340,Moreno LLC,Micronesia,4.4,Premium
+S0341,Logan-Carroll,Palau,4.3,Premium
+S0342,Pham-Weiss,Ecuador,4.2,Standard
+S0343,"Allen, Hart and Howard",Cayman Islands,4.1,Standard
+S0344,Frank Ltd,Germany,4.8,Premium
+S0345,Hobbs-Reed,Palestinian Territory,3.1,Strategic
+S0346,"Forbes, Ingram and Brown",Jordan,4.7,Strategic
+S0347,Bennett-Carter,Suriname,4.3,Premium
+S0348,Alexander-Lyons,North Macedonia,4.0,Strategic
+S0349,"Stone, Brown and Nunez",Uganda,3.1,Premium
+S0350,"Jackson, Day and Freeman",Guam,4.3,Strategic
+S0351,"Martinez, Aguilar and Castillo",Cote d'Ivoire,5.0,Strategic
+S0352,Welch-Benton,Indonesia,3.5,Strategic
+S0353,"Perez, Wright and Proctor",Greenland,4.5,Premium
+S0354,"Sanchez, Rhodes and Paul",Heard Island and McDonald Islands,4.1,Standard
+S0355,Curtis-Alvarado,Vietnam,4.0,Premium
+S0356,Reynolds Group,Mauritius,4.7,Premium
+S0357,Duncan LLC,Taiwan,4.4,Premium
+S0358,Hernandez Group,Israel,4.9,Strategic
+S0359,Lloyd Ltd,Belarus,3.5,Strategic
+S0360,Ellis Group,Papua New Guinea,3.1,Strategic
+S0361,"Yates, Roberts and Moore",Malta,3.8,Premium
+S0362,Arroyo Inc,Kyrgyz Republic,4.9,Standard
+S0363,Cochran-Bush,Somalia,4.6,Standard
+S0364,Medina Group,Albania,3.1,Strategic
+S0365,"Lara, Hendrix and Solomon",Panama,3.3,Strategic
+S0366,Peterson and Sons,Belarus,3.9,Strategic
+S0367,"Walls, Horne and Thompson",Myanmar,3.3,Premium
+S0368,Palmer Group,Dominica,3.9,Standard
+S0369,Boyle Ltd,Comoros,3.3,Standard
+S0370,"Gordon, Carr and Bolton",Belarus,4.8,Premium
+S0371,Sanders Group,British Indian Ocean Territory (Chagos Archipelago),3.7,Premium
+S0372,"Schneider, Hughes and Castro",Norway,3.5,Strategic
+S0373,Williams-Stone,Slovakia (Slovak Republic),3.4,Strategic
+S0374,Smith LLC,Lao People's Democratic Republic,3.6,Standard
+S0375,Sharp-Jackson,Burkina Faso,3.5,Premium
+S0376,"Zimmerman, Flores and Nichols",Kiribati,4.0,Standard
+S0377,"Pratt, Spencer and Hale",Qatar,4.9,Standard
+S0378,Stokes-Simpson,Fiji,3.1,Strategic
+S0379,Hebert-Green,Fiji,3.0,Standard
+S0380,Norman PLC,Belize,4.4,Premium
+S0381,"Ward, Hebert and Green",El Salvador,4.4,Strategic
+S0382,Cruz-Cunningham,American Samoa,4.9,Strategic
+S0383,Finley LLC,Czech Republic,3.9,Strategic
+S0384,Jones PLC,Mauritania,4.7,Standard
+S0385,"Gonzalez, Patterson and Wiggins",Morocco,4.2,Standard
+S0386,Spencer Group,Rwanda,3.2,Premium
+S0387,Miller Inc,Cape Verde,3.5,Premium
+S0388,"Brown, Francis and Reyes",Pitcairn Islands,3.8,Standard
+S0389,Garza and Sons,Peru,4.9,Standard
+S0390,"Payne, Pennington and Horn",Burundi,4.6,Premium
+S0391,Harris-Higgins,Indonesia,4.1,Premium
+S0392,Curry-White,French Southern Territories,3.4,Strategic
+S0393,"Thomas, Vasquez and Carter",Malaysia,3.5,Premium
+S0394,Clark-Ford,French Guiana,4.2,Standard
+S0395,"Watkins, Gilbert and Fischer",Equatorial Guinea,5.0,Standard
+S0396,"Brown, Poole and Stewart",Sudan,3.0,Standard
+S0397,Frye Ltd,Swaziland,4.7,Premium
+S0398,Rodriguez Group,North Macedonia,4.8,Strategic
+S0399,"Sanchez, Clark and Romero",British Virgin Islands,3.6,Standard
+S0400,"Lewis, Valentine and Guerrero",Maldives,3.8,Strategic
+S0401,Cervantes PLC,Equatorial Guinea,3.3,Standard
+S0402,"Smith, Martinez and Harris",Serbia,3.0,Standard
+S0403,"Gray, Olson and Austin",Ethiopia,4.8,Strategic
+S0404,Little Ltd,Paraguay,3.1,Premium
+S0405,"Shaw, Wyatt and Faulkner",Seychelles,3.5,Standard
+S0406,"Fisher, Nelson and Davis",Switzerland,3.9,Premium
+S0407,Lopez Inc,Korea,4.8,Standard
+S0408,Freeman Group,Swaziland,4.1,Strategic
+S0409,"Ryan, Glass and Velez",Bhutan,4.7,Standard
+S0410,Gregory Inc,Tanzania,4.9,Standard
+S0411,Bass-Lopez,China,3.9,Standard
+S0412,"Shaw, Boone and Cruz",Guyana,3.1,Strategic
+S0413,Hall Ltd,Turkey,3.3,Premium
+S0414,"Jarvis, Frank and Brown",United Kingdom,4.4,Standard
+S0415,Ellis PLC,Christmas Island,4.3,Premium
+S0416,Nash LLC,Latvia,3.7,Premium
+S0417,Aguilar Inc,Tonga,4.9,Strategic
+S0418,"Foster, Kaiser and Hogan",Tajikistan,4.3,Standard
+S0419,"Lucas, Foster and Bullock",Latvia,3.1,Strategic
+S0420,Arnold Group,Andorra,3.4,Premium
+S0421,Torres-Curry,South Africa,4.2,Strategic
+S0422,Carlson PLC,Thailand,4.3,Standard
+S0423,Jones-Lawson,Somalia,4.8,Strategic
+S0424,Perry-Lutz,Somalia,3.8,Standard
+S0425,Johnston Inc,Argentina,4.4,Strategic
+S0426,"Moreno, Garcia and Rivera",Venezuela,3.8,Strategic
+S0427,Christensen-Johnson,Heard Island and McDonald Islands,3.1,Premium
+S0428,"Jones, Kemp and Miller",Mauritius,4.5,Strategic
+S0429,Cook-Ellison,Mayotte,4.9,Standard
+S0430,Livingston LLC,Guyana,3.5,Standard
+S0431,Thomas PLC,Cameroon,3.3,Standard
+S0432,"Rodriguez, Stewart and Romero",Swaziland,4.7,Standard
+S0433,Forbes-Christian,New Caledonia,3.1,Standard
+S0434,Johnson-Brown,Norfolk Island,4.8,Strategic
+S0435,Wilkins LLC,Saudi Arabia,3.9,Premium
+S0436,Pierce-Berry,Niger,3.2,Premium
+S0437,Jones and Sons,United Kingdom,3.1,Strategic
+S0438,Gutierrez-Martinez,Micronesia,3.1,Strategic
+S0439,"Davidson, Young and Garcia",Saint Helena,3.3,Premium
+S0440,Williams-Hunt,Solomon Islands,4.5,Premium
+S0441,Short Inc,Mexico,3.0,Strategic
+S0442,Morgan-Phillips,Maldives,3.5,Premium
+S0443,Johnson LLC,South Georgia and the South Sandwich Islands,4.6,Standard
+S0444,"Johnson, Hays and Butler",Central African Republic,3.6,Premium
+S0445,"Williams, Chapman and Alvarado",Tunisia,3.1,Premium
+S0446,"Coleman, Dudley and Gonzalez",Brazil,3.6,Standard
+S0447,"Anderson, Willis and Martinez",Ethiopia,3.5,Premium
+S0448,Gonzalez-Brown,Korea,4.6,Strategic
+S0449,Ho-Mendez,Guinea,3.6,Premium
+S0450,Frost Ltd,Algeria,4.7,Strategic
+S0451,Jarvis Inc,Chad,4.1,Premium
+S0452,Roach-Williams,Denmark,4.8,Strategic
+S0453,Warren and Sons,Antigua and Barbuda,4.6,Strategic
+S0454,"Gonzalez, Ramos and Sanchez",Madagascar,4.0,Standard
+S0455,Nguyen-Blackburn,Barbados,4.3,Premium
+S0456,Wheeler and Sons,Poland,4.0,Strategic
+S0457,"Phillips, Fitzpatrick and Simmons",Lebanon,4.4,Strategic
+S0458,Johnson-Smith,Bosnia and Herzegovina,4.4,Strategic
+S0459,"Garrett, Beck and Farley",Jersey,3.1,Premium
+S0460,"Perkins, Morgan and Lucas",Congo,4.5,Standard
+S0461,"Palmer, Snyder and Wilkinson",New Caledonia,3.7,Strategic
+S0462,"Guerrero, Case and Wyatt",Netherlands Antilles,3.6,Premium
+S0463,"Rodgers, Stein and Tate",Netherlands,3.7,Strategic
+S0464,Martin-Adams,Svalbard & Jan Mayen Islands,3.1,Premium
+S0465,"Turner, Hubbard and Sanders",Mauritius,4.6,Strategic
+S0466,Scott-Smith,Saudi Arabia,4.1,Premium
+S0467,Casey Group,Uganda,3.6,Premium
+S0468,Hall-Wallace,Reunion,3.5,Strategic
+S0469,Schaefer-Horton,Niue,4.5,Strategic
+S0470,Reyes Group,Austria,3.0,Standard
+S0471,"Rodriguez, Savage and Sexton",Equatorial Guinea,3.3,Strategic
+S0472,"Harmon, Torres and Smith",Guadeloupe,3.7,Premium
+S0473,Lawrence-Buchanan,Trinidad and Tobago,4.1,Premium
+S0474,Clark Inc,Greenland,5.0,Premium
+S0475,Powers Ltd,Bahrain,3.9,Premium
+S0476,Norman LLC,Ireland,4.9,Premium
+S0477,"Peterson, Johnson and Schneider",Portugal,4.6,Standard
+S0478,Campos PLC,San Marino,4.8,Standard
+S0479,"Davidson, Turner and Gray",Vanuatu,3.3,Strategic
+S0480,"Dudley, Cochran and Hodge",Wallis and Futuna,4.0,Premium
+S0481,Russell and Sons,New Caledonia,4.6,Strategic
+S0482,Williamson Ltd,Czech Republic,4.1,Premium
+S0483,Marquez Group,Cote d'Ivoire,3.7,Strategic
+S0484,"Hernandez, Mayo and Manning",Turkmenistan,3.7,Premium
+S0485,Smith-Bush,Gambia,3.9,Premium
+S0486,Jimenez-Leonard,Antarctica (the territory South of 60 deg S),4.1,Standard
+S0487,Kim-Peterson,Spain,3.1,Premium
+S0488,"Burns, Crosby and Rodriguez",Oman,4.4,Strategic
+S0489,Cochran-Bates,Japan,3.3,Standard
+S0490,Wilkinson Inc,Northern Mariana Islands,3.4,Premium
+S0491,Wilson-Walker,New Caledonia,4.9,Strategic
+S0492,"Schneider, Mcpherson and Mcintosh",Jordan,3.1,Standard
+S0493,Mueller-Brown,Nepal,5.0,Strategic
+S0494,"Palmer, Martin and Carter",Australia,3.5,Standard
+S0495,Robinson Ltd,Bahamas,3.4,Standard
+S0496,Dennis-Phelps,Bahrain,4.3,Strategic
+S0497,Smith PLC,Guadeloupe,4.3,Standard
+S0498,Glover-Carr,Monaco,4.6,Standard
+S0499,Harrison LLC,French Polynesia,4.3,Standard
+S0500,"Pierce, King and Hall",Cote d'Ivoire,4.0,Premium
