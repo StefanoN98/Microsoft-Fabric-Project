@@ -21,6 +21,7 @@ In this project, the same pattern (small/medium structured or semi-structured fi
 | `marketing/` | `marketing_campaigns.csv` | CSV | Marketing campaign master data |
 | `ecommerce/` | `web_logs.json` | JSON | Web logs, large file, requires special handling (see below) |
 
+All the data are stored here: [GlobalRetail Source Data](https://github.com/StefanoN98/Microsoft-Fabric-Project/tree/e485802398dbea7afc6a36d1cc4e9f462f698ae4/globalretail-source-data)
 
 ## Repository Structure
 
