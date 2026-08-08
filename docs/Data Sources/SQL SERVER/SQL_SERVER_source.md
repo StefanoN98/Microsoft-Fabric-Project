@@ -56,6 +56,7 @@ So to guarantee the connection:
 1. Install the On-premises Data Gateway (Standard mode) on the machine hosting SQL Server
 2. Register the gateway under the Fabric-linked account
 3. Create a new connection in Fabric of type SQL Server, using Basic Authentication and pointing to the gateway cluster
-4. Reference this connection inside the ingestion pipeline's Copy Activity / Lookup Activity
+4. Reference this connection inside the ingestion pipeline's Copy Activity
 
-See Gateway Setup (metti link) for the full walkthrough.
+<img src="../../Images/bronze/SQL_SERVER/on-premis%20gateway%20desktop.png" alt="On-Prem-Gateway" width="600"/>
+<img src="../../Images/bronze/SQL_SERVER/validated gateway in Fabric.png" alt="Fabric-Gateway" width="1000"/>
