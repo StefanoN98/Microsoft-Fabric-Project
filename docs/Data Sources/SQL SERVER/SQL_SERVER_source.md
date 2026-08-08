@@ -10,6 +10,8 @@ SQL Server hosts the **operational, transactional database** of the simulated e-
 
 All transactional/order-related data lives in this database, under a dedicated `sales` schema:
 
+<img src="../../Images/bronze/SQL_SERVER/sql_server_tables.png" alt="Data Source Schema" width="300"/>
+
 | Table | Description |
 |---|---|
 | `Orders` | Order header data (customer, date, status, payment, totals) |
@@ -33,7 +35,6 @@ GlobalRetail_OLTP
     ├── Reviews
     └── OrderCampaign
 ```
-
 
 ## Build Process
 The database is built following this process: schema and constraints are defined **before** any data is loaded
