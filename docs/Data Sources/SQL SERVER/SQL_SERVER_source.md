@@ -36,49 +36,19 @@ GlobalRetail_OLTP
     └── OrderCampaign
 ```
 
+## Scripts
+The following folders contains all the script to build the database: [SQL Server scripts](https://github.com/StefanoN98/Microsoft-Fabric-Project/tree/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts)
 
-## Constraints & Business Rules
-Referential integrity and business rules are enforced at the database level:
+In particular:
+- [Script 1](https://github.com/StefanoN98/Microsoft-Fabric-Project/blob/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts/01_script_create_tables_SSMS.sql) creates the database tables and their schemas. Existing tables are dropped before creation to ensure a clean and reproducible setup. Data types are selected according to the expected data, with NOT NULL constraints applied to mandatory fields and primary keys defined for entity identification.
 
-```sql
--- Foreign Keys
-ALTER TABLE sales.OrderDetails
-ADD CONSTRAINT FK_OrderDetails_Orders
-FOREIGN KEY (OrderID)
-REFERENCES sales.Orders(OrderID);
+- [Script 2](https://github.com/StefanoN98/Microsoft-Fabric-Project/blob/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts/02_script_insert_bulk.sql) loads the source data into the database. BULK INSERT is used for CSV files, while OPENROWSET combined with OPENJSON is used to parse and load JSON data.
 
-ALTER TABLE sales.OrderCampaign
-ADD CONSTRAINT FK_OrderCampaign_Orders
-FOREIGN KEY (OrderID)
-REFERENCES sales.Orders(OrderID);
+- [Script 3](https://github.com/StefanoN98/Microsoft-Fabric-Project/blob/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts/03_set_index_tables.sql) creates non-clustered indexes on columns frequently used for joins, filtering, searching, and analytical queries, such as customer IDs, product IDs, order dates, and campaign IDs. The indexes are designed to improve query performance on the most commonly accessed attributes.
 
--- Business Rules
-ALTER TABLE sales.Reviews
-ADD CONSTRAINT CK_Reviews_Rating
-CHECK (Rating BETWEEN 1 AND 5);
+- [Script 4](https://github.com/StefanoN98/Microsoft-Fabric-Project/blob/11b8fb65046725ab765296659db062dcaaa77709/docs/Data%20Sources/SQL%20SERVER/scripts/04_script_constraints_%26_business_rules_tables.sql) applies referential integrity constraints and business rules. Foreign keys are defined between related tables, while CHECK constraints enforce data quality rules such as valid ratings, positive quantities, non-negative prices and order totals, and supported currency values.
 
-```
 
-## Indexing Strategy
-Non-clustered indexes are added on foreign keys and frequently filtered columns, based on expected query patterns (search by customer, by date, by status)
-
-```sql
-
--- Search orders by customer
-CREATE NONCLUSTERED INDEX IX_Orders_CustomerID
-ON sales.Orders(CustomerID);
-
--- Search orders by date
-CREATE NONCLUSTERED INDEX IX_Orders_OrderDate
-ON sales.Orders(OrderDate);
-
--- Search orders by status
-CREATE NONCLUSTERED INDEX IX_Orders_OrderStatus
-ON sales.Orders(OrderStatus);
-
--- Join Order -> OrderDetails
-CREATE NONCLUSTERED INDEX IX_OrderDetails_OrderID
-ON sales.OrderDetails(OrderID);
 
 ```
 
