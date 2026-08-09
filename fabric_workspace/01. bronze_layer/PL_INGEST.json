@@ -5,10 +5,10 @@
         "LH_Bronze": {
             "type": "string"
         },
-        "conn_globaretail alice.ferrua199": {
+        "conn_globaretail *******": {
             "type": "string"
         },
-        "github_globalretail alice.ferrua199 (2)": {
+        "github_globalretail *******": {
             "type": "string"
         },
         "conn_sql_server": {
@@ -189,7 +189,7 @@
                                                             },
                                                             "schema": [],
                                                             "externalReferences": {
-                                                                "connection": "[parameters('conn_globaretail alice.ferrua199')]"
+                                                                "connection": "[parameters('conn_globaretail *******')]"
                                                             }
                                                         }
                                                     },
@@ -365,7 +365,7 @@
                                                     }
                                                 },
                                                 "externalReferences": {
-                                                    "connection": "[parameters('github_globalretail alice.ferrua199 (2)')]"
+                                                    "connection": "[parameters('github_globalretail *******')]"
                                                 }
                                             }
                                         },
