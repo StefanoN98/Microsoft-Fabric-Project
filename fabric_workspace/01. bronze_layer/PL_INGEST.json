@@ -1,0 +1,559 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "LH_Bronze": {
+            "type": "string"
+        },
+        "conn_globaretail alice.ferrua199": {
+            "type": "string"
+        },
+        "github_globalretail alice.ferrua199 (2)": {
+            "type": "string"
+        },
+        "conn_sql_server": {
+            "type": "string"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "name": "PL_INGEST",
+            "type": "pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "LK_Config",
+                        "type": "Lookup",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "source": {
+                                "type": "DelimitedTextSource",
+                                "storeSettings": {
+                                    "type": "LakehouseReadSettings",
+                                    "recursive": true,
+                                    "enablePartitionDiscovery": false
+                                },
+                                "formatSettings": {
+                                    "type": "DelimitedTextReadSettings"
+                                }
+                            },
+                            "firstRowOnly": false,
+                            "datasetSettings": {
+                                "annotations": [],
+                                "linkedService": {
+                                    "name": "LH_Bronze",
+                                    "properties": {
+                                        "annotations": [],
+                                        "type": "Lakehouse",
+                                        "typeProperties": {
+                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                            "artifactId": "[parameters('LH_Bronze')]",
+                                            "rootFolder": "Files"
+                                        }
+                                    }
+                                },
+                                "type": "DelimitedText",
+                                "typeProperties": {
+                                    "location": {
+                                        "type": "LakehouseLocation",
+                                        "fileName": "config_ingestion.csv"
+                                    },
+                                    "columnDelimiter": ";",
+                                    "escapeChar": "\\",
+                                    "firstRowAsHeader": true,
+                                    "quoteChar": "\""
+                                },
+                                "schema": []
+                            }
+                        }
+                    },
+                    {
+                        "name": "Filter_ADLS",
+                        "type": "Filter",
+                        "dependsOn": [
+                            {
+                                "activity": "LK_Config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('LK_Config').output.value",
+                                "type": "Expression"
+                            },
+                            "condition": {
+                                "value": "@and(\n    equals(item().Enabled, '1'),\n    equals(item().SourceType, 'ADLS')\n)",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ForEach1",
+                        "type": "ForEach",
+                        "dependsOn": [
+                            {
+                                "activity": "Filter_ADLS",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Filter_ADLS').output.value",
+                                "type": "Expression"
+                            },
+                            "isSequential": true,
+                            "activities": [
+                                {
+                                    "name": "If Condition1",
+                                    "type": "IfCondition",
+                                    "dependsOn": [],
+                                    "typeProperties": {
+                                        "expression": {
+                                            "value": "@equals(item().CopyMode, 'COPY')",
+                                            "type": "Expression"
+                                        },
+                                        "ifFalseActivities": [
+                                            {
+                                                "name": "Shortcut x products",
+                                                "type": "TridentNotebook",
+                                                "dependsOn": [],
+                                                "policy": {
+                                                    "timeout": "0.12:00:00",
+                                                    "retry": 0,
+                                                    "retryIntervalInSeconds": 30,
+                                                    "secureOutput": false,
+                                                    "secureInput": false
+                                                },
+                                                "typeProperties": {
+                                                    "notebookId": "e0b4f4a0-58da-43fc-b83f-e02f7b8570c6",
+                                                    "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                                                }
+                                            }
+                                        ],
+                                        "ifTrueActivities": [
+                                            {
+                                                "name": "Copy data1",
+                                                "type": "Copy",
+                                                "dependsOn": [],
+                                                "policy": {
+                                                    "timeout": "0.12:00:00",
+                                                    "retry": 0,
+                                                    "retryIntervalInSeconds": 30,
+                                                    "secureOutput": false,
+                                                    "secureInput": false
+                                                },
+                                                "typeProperties": {
+                                                    "source": {
+                                                        "type": "DelimitedTextSource",
+                                                        "storeSettings": {
+                                                            "type": "AzureBlobFSReadSettings",
+                                                            "recursive": true,
+                                                            "enablePartitionDiscovery": false
+                                                        },
+                                                        "formatSettings": {
+                                                            "type": "DelimitedTextReadSettings"
+                                                        },
+                                                        "datasetSettings": {
+                                                            "annotations": [],
+                                                            "type": "DelimitedText",
+                                                            "typeProperties": {
+                                                                "location": {
+                                                                    "type": "AzureBlobFSLocation",
+                                                                    "fileName": {
+                                                                        "value": "@item().ObjectName",
+                                                                        "type": "Expression"
+                                                                    },
+                                                                    "folderPath": {
+                                                                        "value": "@item().SourceFolder",
+                                                                        "type": "Expression"
+                                                                    },
+                                                                    "fileSystem": "landing"
+                                                                },
+                                                                "columnDelimiter": ",",
+                                                                "escapeChar": "\\",
+                                                                "firstRowAsHeader": true,
+                                                                "quoteChar": "\""
+                                                            },
+                                                            "schema": [],
+                                                            "externalReferences": {
+                                                                "connection": "[parameters('conn_globaretail alice.ferrua199')]"
+                                                            }
+                                                        }
+                                                    },
+                                                    "sink": {
+                                                        "type": "DelimitedTextSink",
+                                                        "storeSettings": {
+                                                            "type": "AzureBlobStorageWriteSettings"
+                                                        },
+                                                        "formatSettings": {
+                                                            "type": "DelimitedTextWriteSettings",
+                                                            "fileExtension": ".txt"
+                                                        },
+                                                        "datasetSettings": {
+                                                            "annotations": [],
+                                                            "linkedService": {
+                                                                "name": "LH_Bronze",
+                                                                "properties": {
+                                                                    "annotations": [],
+                                                                    "type": "Lakehouse",
+                                                                    "typeProperties": {
+                                                                        "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                                                        "artifactId": "[parameters('LH_Bronze')]",
+                                                                        "rootFolder": "Files"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "type": "DelimitedText",
+                                                            "typeProperties": {
+                                                                "location": {
+                                                                    "type": "LakehouseLocation",
+                                                                    "fileName": {
+                                                                        "value": "@item().ObjectName",
+                                                                        "type": "Expression"
+                                                                    },
+                                                                    "folderPath": {
+                                                                        "value": "@item().DestinationFolder",
+                                                                        "type": "Expression"
+                                                                    }
+                                                                },
+                                                                "columnDelimiter": ",",
+                                                                "escapeChar": "\\",
+                                                                "firstRowAsHeader": true,
+                                                                "quoteChar": "\""
+                                                            },
+                                                            "schema": []
+                                                        }
+                                                    },
+                                                    "enableStaging": false,
+                                                    "translator": {
+                                                        "type": "TabularTranslator",
+                                                        "typeConversion": true,
+                                                        "typeConversionSettings": {
+                                                            "allowDataTruncation": true,
+                                                            "treatBooleanAsNumber": false
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Copy from Files to Tables",
+                        "type": "TridentNotebook",
+                        "dependsOn": [
+                            {
+                                "activity": "ForEach1",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            },
+                            {
+                                "activity": "Load_web_logs_only",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            },
+                            {
+                                "activity": "ForEach3",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "notebookId": "c459ac72-62cd-4099-9bd6-51e297e32402",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                        }
+                    },
+                    {
+                        "name": "Filter_GITHUB",
+                        "type": "Filter",
+                        "dependsOn": [
+                            {
+                                "activity": "LK_Config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('LK_Config').output.value",
+                                "type": "Expression"
+                            },
+                            "condition": {
+                                "value": "@and(\n       and(\n           equals(item().Enabled, '1'),\n           equals(item().SourceType, 'GITHUB')\n       ),\n       not(equals(item().ObjectName, 'web_logs.json'))\n   )",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ForEach2",
+                        "type": "ForEach",
+                        "dependsOn": [
+                            {
+                                "activity": "Filter_GITHUB",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Filter_GITHUB').output.value",
+                                "type": "Expression"
+                            },
+                            "isSequential": true,
+                            "activities": [
+                                {
+                                    "name": "Copy data2",
+                                    "type": "Copy",
+                                    "dependsOn": [],
+                                    "policy": {
+                                        "timeout": "0.12:00:00",
+                                        "retry": 0,
+                                        "retryIntervalInSeconds": 30,
+                                        "secureOutput": false,
+                                        "secureInput": false
+                                    },
+                                    "typeProperties": {
+                                        "source": {
+                                            "type": "BinarySource",
+                                            "storeSettings": {
+                                                "type": "HttpReadSettings",
+                                                "requestMethod": "GET",
+                                                "additionalHeaders": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                                                "requestTimeout": ""
+                                            },
+                                            "formatSettings": {
+                                                "type": "BinaryReadSettings"
+                                            },
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "type": "Binary",
+                                                "typeProperties": {
+                                                    "location": {
+                                                        "type": "HttpServerLocation",
+                                                        "relativeUrl": {
+                                                            "value": "@concat(item().SourceFolder, '/', item().ObjectName)",
+                                                            "type": "Expression"
+                                                        }
+                                                    }
+                                                },
+                                                "externalReferences": {
+                                                    "connection": "[parameters('github_globalretail alice.ferrua199 (2)')]"
+                                                }
+                                            }
+                                        },
+                                        "sink": {
+                                            "type": "BinarySink",
+                                            "storeSettings": {
+                                                "type": "AzureBlobStorageWriteSettings"
+                                            },
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "linkedService": {
+                                                    "name": "LH_Bronze",
+                                                    "properties": {
+                                                        "annotations": [],
+                                                        "type": "Lakehouse",
+                                                        "typeProperties": {
+                                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                                            "artifactId": "[parameters('LH_Bronze')]",
+                                                            "rootFolder": "Files"
+                                                        }
+                                                    }
+                                                },
+                                                "type": "Binary",
+                                                "typeProperties": {
+                                                    "location": {
+                                                        "type": "LakehouseLocation",
+                                                        "fileName": {
+                                                            "value": "@item().ObjectName",
+                                                            "type": "Expression"
+                                                        },
+                                                        "folderPath": {
+                                                            "value": "@item().DestinationFolder",
+                                                            "type": "Expression"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "enableStaging": false
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Load_web_logs_only",
+                        "description": "Poichè supera i 100 mb lo possiamo caricare solo tramite notebook",
+                        "type": "TridentNotebook",
+                        "dependsOn": [
+                            {
+                                "activity": "ForEach2",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "notebookId": "9585088c-65d7-4fe6-8b8f-61a07f7f5f98",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                        }
+                    },
+                    {
+                        "name": "Filter_Sql_Server",
+                        "type": "Filter",
+                        "dependsOn": [
+                            {
+                                "activity": "LK_Config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('LK_Config').output.value",
+                                "type": "Expression"
+                            },
+                            "condition": {
+                                "value": "@and(\n    equals(item().Enabled, '1'),\n    equals(item().SourceType, 'SQL Server')\n)",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ForEach3",
+                        "type": "ForEach",
+                        "dependsOn": [
+                            {
+                                "activity": "Filter_Sql_Server",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Filter_Sql_Server').output.value\r\n",
+                                "type": "Expression"
+                            },
+                            "isSequential": true,
+                            "activities": [
+                                {
+                                    "name": "Copy data3",
+                                    "type": "Copy",
+                                    "dependsOn": [],
+                                    "policy": {
+                                        "timeout": "0.12:00:00",
+                                        "retry": 0,
+                                        "retryIntervalInSeconds": 30,
+                                        "secureOutput": false,
+                                        "secureInput": false
+                                    },
+                                    "typeProperties": {
+                                        "source": {
+                                            "type": "SqlServerSource",
+                                            "sqlReaderQuery": {
+                                                "value": "SELECT *\nFROM @{item().ObjectName}",
+                                                "type": "Expression"
+                                            },
+                                            "queryTimeout": "02:00:00",
+                                            "partitionOption": "None",
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "type": "SqlServerTable",
+                                                "schema": [],
+                                                "typeProperties": {
+                                                    "database": "GlobalRetail_OLTP"
+                                                },
+                                                "externalReferences": {
+                                                    "connection": "[parameters('conn_sql_server')]"
+                                                }
+                                            }
+                                        },
+                                        "sink": {
+                                            "type": "LakehouseTableSink",
+                                            "tableActionOption": "OverwriteSchema",
+                                            "partitionOption": "None",
+                                            "applyVOrder": false,
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "linkedService": {
+                                                    "name": "LH_Bronze",
+                                                    "properties": {
+                                                        "annotations": [],
+                                                        "type": "Lakehouse",
+                                                        "typeProperties": {
+                                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                                            "artifactId": "[parameters('LH_Bronze')]",
+                                                            "rootFolder": "Tables"
+                                                        }
+                                                    }
+                                                },
+                                                "type": "LakehouseTable",
+                                                "schema": [],
+                                                "typeProperties": {
+                                                    "table": {
+                                                        "value": "@item().DestinationTable",
+                                                        "type": "Expression"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "enableStaging": false,
+                                        "translator": {
+                                            "type": "TabularTranslator",
+                                            "typeConversion": true,
+                                            "typeConversionSettings": {
+                                                "allowDataTruncation": true,
+                                                "treatBooleanAsNumber": false
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "lastModifiedByObjectId": "baa26372-e662-4147-a2c3-48bb3dcc541d",
+                "lastPublishTime": "2026-08-04T06:01:23Z"
+            },
+            "dependsOn": []
+        }
+    ]
+}
