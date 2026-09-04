@@ -1,0 +1,297 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "LH_Bronze": {
+            "type": "string"
+        },
+        "LH_Silver": {
+            "type": "string"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "name": "Silver_Pipeline",
+            "type": "pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "Read file config",
+                        "type": "Lookup",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "source": {
+                                "type": "DelimitedTextSource",
+                                "storeSettings": {
+                                    "type": "LakehouseReadSettings",
+                                    "recursive": true,
+                                    "enablePartitionDiscovery": false
+                                },
+                                "formatSettings": {
+                                    "type": "DelimitedTextReadSettings"
+                                }
+                            },
+                            "firstRowOnly": false,
+                            "datasetSettings": {
+                                "annotations": [],
+                                "linkedService": {
+                                    "name": "LH_Bronze",
+                                    "properties": {
+                                        "annotations": [],
+                                        "type": "Lakehouse",
+                                        "typeProperties": {
+                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                            "artifactId": "[parameters('LH_Bronze')]",
+                                            "rootFolder": "Files"
+                                        }
+                                    }
+                                },
+                                "type": "DelimitedText",
+                                "typeProperties": {
+                                    "location": {
+                                        "type": "LakehouseLocation",
+                                        "fileName": "config_ingestion.csv"
+                                    },
+                                    "columnDelimiter": ";",
+                                    "escapeChar": "\\",
+                                    "firstRowAsHeader": true,
+                                    "quoteChar": "\""
+                                },
+                                "schema": []
+                            }
+                        }
+                    },
+                    {
+                        "name": "Filter marketing - ecommerce",
+                        "type": "Filter",
+                        "dependsOn": [
+                            {
+                                "activity": "Read file config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Read file config').output.value",
+                                "type": "Expression"
+                            },
+                            "condition": {
+                                "value": "@contains(createArray('marketing','ecommerce'), item().SourceFolder)",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ForEach1",
+                        "type": "ForEach",
+                        "dependsOn": [
+                            {
+                                "activity": "Filter marketing - ecommerce",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Filter marketing - ecommerce').output.value",
+                                "type": "Expression"
+                            },
+                            "isSequential": true,
+                            "activities": [
+                                {
+                                    "name": "Copy data1",
+                                    "type": "Copy",
+                                    "dependsOn": [],
+                                    "policy": {
+                                        "timeout": "0.12:00:00",
+                                        "retry": 0,
+                                        "retryIntervalInSeconds": 30,
+                                        "secureOutput": false,
+                                        "secureInput": false
+                                    },
+                                    "typeProperties": {
+                                        "source": {
+                                            "type": "LakehouseTableSource",
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "linkedService": {
+                                                    "name": "LH_Bronze",
+                                                    "properties": {
+                                                        "annotations": [],
+                                                        "type": "Lakehouse",
+                                                        "typeProperties": {
+                                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                                            "artifactId": "[parameters('LH_Bronze')]",
+                                                            "rootFolder": "Tables"
+                                                        }
+                                                    }
+                                                },
+                                                "type": "LakehouseTable",
+                                                "schema": [],
+                                                "typeProperties": {
+                                                    "table": {
+                                                        "value": "@item().DestinationTable",
+                                                        "type": "Expression"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "sink": {
+                                            "type": "LakehouseTableSink",
+                                            "tableActionOption": "OverwriteSchema",
+                                            "partitionOption": "None",
+                                            "applyVOrder": false,
+                                            "datasetSettings": {
+                                                "annotations": [],
+                                                "linkedService": {
+                                                    "name": "LH_Silver",
+                                                    "properties": {
+                                                        "annotations": [],
+                                                        "type": "Lakehouse",
+                                                        "typeProperties": {
+                                                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                                                            "artifactId": "[parameters('LH_Silver')]",
+                                                            "rootFolder": "Tables"
+                                                        }
+                                                    }
+                                                },
+                                                "type": "LakehouseTable",
+                                                "schema": [],
+                                                "typeProperties": {
+                                                    "table": {
+                                                        "value": "@replace(item().DestinationTable, 'bronze_', 'silver_')",
+                                                        "type": "Expression"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "enableStaging": false,
+                                        "translator": {
+                                            "type": "TabularTranslator",
+                                            "typeConversion": true,
+                                            "typeConversionSettings": {
+                                                "allowDataTruncation": true,
+                                                "treatBooleanAsNumber": false
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Filter product_catalog",
+                        "type": "Filter",
+                        "dependsOn": [
+                            {
+                                "activity": "Read file config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Read file config').output.value",
+                                "type": "Expression"
+                            },
+                            "condition": {
+                                "value": "@equals(item().SourceFolder, 'product_catalog')",
+                                "type": "Expression"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Clean_Load_product_catalog",
+                        "type": "TridentNotebook",
+                        "dependsOn": [
+                            {
+                                "activity": "Filter product_catalog",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "notebookId": "a86b13bd-16df-480c-9943-ae9a48bdab06",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                        }
+                    },
+                    {
+                        "name": "Dataflow crm tables",
+                        "type": "RefreshDataflow",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "dataflowId": "af005ac3-9f88-4a7b-9fe8-3de9775dc853",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0",
+                            "notifyOption": "NoNotification",
+                            "dataflowType": "DataflowFabric",
+                            "executeMashupQueriesOnly": true
+                        }
+                    },
+                    {
+                        "name": "NB erp tables",
+                        "type": "TridentNotebook",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "notebookId": "4d835ad8-1404-4756-a6f9-1722f8efcd9f",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                        }
+                    },
+                    {
+                        "name": "NB sales tables",
+                        "type": "TridentNotebook",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "typeProperties": {
+                            "notebookId": "b27fa8c3-60f0-4bae-b412-1087ab2ae00c",
+                            "workspaceId": "47f4b971-7b6b-4af9-8001-77745ea917c0"
+                        }
+                    }
+                ],
+                "lastModifiedByObjectId": "baa26372-e662-4147-a2c3-48bb3dcc541d",
+                "lastPublishTime": "2026-07-21T10:07:23Z"
+            },
+            "dependsOn": []
+        }
+    ]
+}
