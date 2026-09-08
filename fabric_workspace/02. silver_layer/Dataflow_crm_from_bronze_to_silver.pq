@@ -17,7 +17,7 @@ let
   #"Navigation 1" = Navigation{[lakehouseId = "c9c219f7-14cc-47f2-8994-35d08101e937"]}[Data],
   #"Navigation 2" = #"Navigation 1"{[Id = "bronze_legacy_customers", ItemKind = "Table"]}[Data],
 
-  // Deduplica sicura: prima riga intera, poi verifica PK residui
+  // Deduplicazione sicura: prima riga intera, poi verifica PK residui
   #"Removed exact duplicates" = Table.Distinct(#"Navigation 2"),
 
   // Standardizzazione Country con match esatto (non su sottostringa)
@@ -26,10 +26,10 @@ let
   // Normalizzazione placeholder Phone
   #"Replaced value in Phone" = Table.ReplaceValue(#"Replaced value in Countries", "UNKNOWN", null, Replacer.ReplaceValue, {"Phone"}),
 
-  // ⚠ Da rivedere dopo verifica formati misti Birth_Date
+  // Per gestire formati misti Birth_Date
   #"Changed column type" = Table.TransformColumnTypes(#"Replaced value in Phone", {{"Birth_Date", type date}}, "it-IT"),
 
-  // Cast Postal_Code a testo (prevenzione perdita zeri iniziali)
+  // Cast Postal_Code a testo (per zeri iniziali)
   #"Changed Postal Code type" = Table.TransformColumnTypes(#"Changed column type", {{"Postal_Code", type text}}),
 
   // Flag qualità email
