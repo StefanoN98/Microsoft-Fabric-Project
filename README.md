@@ -29,7 +29,35 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 
 ---
 
-## Repository Structure
+## 🛠️ Fabric Workspace Artifacts
+
+Explore the notebooks, dataflows, SQL scripts, and pipelines created within Microsoft Fabric, categorized by Medallion layer:
+
+### 🥉 Bronze Layer
+- [NB_Bronze_Files_To_Delta.ipynb](fabric_workspace/01.%20bronze_layer/NB_Bronze_Files_To_Delta.ipynb) — Converts landed raw files into Bronze Delta tables.
+- [NB_Bronze_Shortcut.ipynb](fabric_workspace/01.%20bronze_layer/NB_Bronze_Shortcut.ipynb) — Programmatically creates OneLake Shortcuts via Fabric REST API.
+- [NB_load_web_logs.ipynb](fabric_workspace/01.%20bronze_layer/NB_load_web_logs.ipynb) — Downloads large Git LFS `web_logs.json` file directly to Lakehouse `Files/`.
+- [PL_INGEST.json](fabric_workspace/01.%20bronze_layer/PL_INGEST.json) — Metadata-driven ingestion pipeline configuration.
+
+### 🥈 Silver Layer
+- [Dataflow_crm_from_bronze_to_silver.pq](fabric_workspace/02.%20silver_layer/Dataflow_crm_from_bronze_to_silver.pq) — Power Query M script for cleansing CRM datasets.
+- [NB_Silver_Analyze_Load_erp_tables.ipynb](fabric_workspace/02.%20silver_layer/NB_Silver_Analyze_Load_erp_tables.ipynb) — Cleans, profiles data quality, and loads ERP tables into Delta format.
+- [NB_Silver_Analyze_Load_sales_tables.ipynb](fabric_workspace/02.%20silver_layer/NB_Silver_Analyze_Load_sales_tables.ipynb) — Standardizes and loads SQL Server-sourced tables.
+- [NB_Silver_Clean_&_load_product_catalog.ipynb](fabric_workspace/02.%20silver_layer/NB_Silver_Clean_%26_load_product_catalog.ipynb) — Flattens nested JSON structures (`attributes` & `images`).
+- [Silver_Pipeline.json](fabric_workspace/02.%20silver_layer/Silver_Pipeline.json) — Ingestion orchestrator for Silver transformation tasks.
+
+### 🥇 Gold Layer
+- [01 Create Schemas.sql](fabric_workspace/03.%20gold_layer/01%20Create%20Schemas.sql) — Generates domain-based Data Warehouse schemas.
+- [02 Create Tables.sql](fabric_workspace/03.%20gold_layer/02%20Create%20Tables.sql) — DDL script to create dimension and fact tables in `WH_Retail`.
+- [03 Add PK & FK constraints.sql](fabric_workspace/03.%20gold_layer/03%20Add%20PK%20%26%20FK%20constraints.sql) — Applies primary key and foreign key integrity constraints.
+- [03.1 Verifica Primary Keys.sql](fabric_workspace/03.%20gold_layer/03.1%20Verifica%20Primary%20Keys.sql) — Integrity validation query for Primary Keys.
+- [03.2 Verifica Foreign Keys.sql](fabric_workspace/03.%20gold_layer/03.2%20Verifica%20Foreign%20Keys.sql) — Integrity validation query for Foreign Keys.
+- [Stored Procedures (.sql)](fabric_workspace/03.%20gold_layer/) — Stored procedures (04–14) managing full & incremental dimensional table loads.
+- [NB_Define_SQL_Gold_Datatype.ipynb](fabric_workspace/03.%20gold_layer/NB_Define_SQL_Gold_Datatype.ipynb) — Spark profiling notebook to propose optimal SQL data types.
+
+---
+
+## 📂 Repository Structure
 
 ```text
 Microsoft-Fabric-Project/
