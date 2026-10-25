@@ -39,3 +39,84 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 5. **[Gold Layer](docs/Architecture/05.%20gold_layer.md)** 🚧 **Work in Progress**  
    Business-ready data model, star schema, and analytical layer.
 
+
+Microsoft-Fabric-Project/
+├── .gitattributes
+├── LICENSE
+├── README.md
+│
+├── docs/
+│   ├── Architecture/
+│   │   ├── 01. architecture_overview.md
+│   │   ├── 02. naming_conventions.md
+│   │   ├── 03. bronze_layer.md
+│   │   ├── 04. silver_layer.md
+│   │   ├── 05. gold_layer.md
+│   │   └── 06. orchestration & lineage.md
+│   │
+│   ├── Data Sources/
+│   │   ├── ADLS2/
+│   │   │   ├── ADLS2_raw_data/
+│   │   │   │   ├── customers.csv
+│   │   │   │   ├── inventory.csv
+│   │   │   │   ├── legacy_customers.csv
+│   │   │   │   ├── products.csv
+│   │   │   │   └── suppliers.csv
+│   │   │   └── ADLS2_source.md
+│   │   │
+│   │   ├── GITHUB/
+│   │   │   └── GITHUB_source.md
+│   │   │
+│   │   └── SQL SERVER/
+│   │       ├── SQL_SERVER_raw_data/
+│   │       │   ├── order_campaign.csv
+│   │       │   ├── order_details.csv
+│   │       │   ├── orders.csv
+│   │       │   └── reviews.json
+│   │       ├── scripts/
+│   │       │   ├── 01_script_create_tables_SSMS.sql
+│   │       │   ├── 02_script_insert_bulk.sql
+│   │       │   ├── 03_set_index_tables.sql
+│   │       │   └── 04_script_constraints_&_business_rules_tables.sql
+│   │       └── SQL_SERVER_source.md
+│   │
+│   └── Images/
+│       ├── architecture/
+│       │   └── GlobalRetail_Architecture_high_level.svg
+│       ├── bronze/
+│       ├── silver/
+│       ├── gold/
+│       └── orchestration/
+│
+├── fabric_workspace/
+│   ├── 01. bronze_layer/
+│   │   ├── NB_Bronze_Files_To_Delta.ipynb
+│   │   ├── NB_Bronze_Shortcut.ipynb
+│   │   ├── NB_load_web_logs.ipynb
+│   │   └── PL_INGEST.json
+│   │
+│   ├── 02. silver_layer/
+│   │   ├── Dataflow_crm_from_bronze_to_silver.pq
+│   │   ├── NB_Silver_Analyze_Load_erp_tables.ipynb
+│   │   ├── NB_Silver_Analyze_Load_sales_tables.ipynb
+│   │   ├── NB_Silver_Clean_&_load_product_catalog.ipynb
+│   │   └── Silver_Pipeline.json
+│   │
+│   └── 03. gold_layer/
+│       ├── 01 Create Schemas.sql
+│       ├── 02 Create Tables.sql
+│       ├── 03 Add PK & FK constraints.sql
+│       ├── 03.1 Verifica Primary Keys.sql
+│       ├── 03.2 Verifica Foreign Keys.sql
+│       ├── 04–14 Stored Procedures (.sql)
+│       └── NB_Define_SQL_Gold_Datatype.ipynb
+│
+└── globalretail-source-data/
+    ├── README.md
+    ├── ecommerce/
+    │   ├── .gitattributes
+    │   └── web_logs.json
+    ├── marketing/
+    │   └── marketing_campaigns.csv
+    └── product_catalog/
+        └── product_catalog.json
