@@ -67,7 +67,6 @@ Microsoft-Fabric-Project/
 │   │
 │   └── Images/
 │       ├── architecture/
-│       │   └── GlobalRetail_Architecture_high_level.svg
 │       ├── bronze/
 │       ├── silver/
 │       ├── gold/
