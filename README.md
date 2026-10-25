@@ -39,7 +39,7 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 5. **[Gold Layer](docs/Architecture/05.%20gold_layer.md)** 🚧 **Work in Progress**  
    Business-ready data model, star schema, and analytical layer.
 
-
+```text
 Microsoft-Fabric-Project/
 ├── .gitattributes
 ├── LICENSE
@@ -120,3 +120,4 @@ Microsoft-Fabric-Project/
     │   └── marketing_campaigns.csv
     └── product_catalog/
         └── product_catalog.json
+```
