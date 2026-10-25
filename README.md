@@ -6,7 +6,7 @@
 The repository is organized into different sections to guide you through the solution, from the original data sources to the final analytical model.
 
 ## 🔌 Data Sources
-Explore the different source systems, their ingestion methods, raw datasets and associated scripts used in the project..
+Explore the different source systems, their ingestion methods, raw datasets and associated scripts used in the project.
 
 | Data Source | Architecture & Ingestion Overview | Raw Data Files | Additional Resources |
 | :--- | :--- | :--- | :--- |
@@ -26,6 +26,10 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 * [04. Silver Layer](docs/Architecture/04.%20silver_layer.md) : Data cleansing, transformation, standardization and quality checks.
 * [05. Gold Layer](docs/Architecture/05.%20gold_layer.md) : Business-ready data model, star schema, and analytical layer.
 * [06. Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) : End-to-end execution pipeline and data lineage flow.
+
+---
+
+## Repository Structure
 
 ```text
 Microsoft-Fabric-Project/
