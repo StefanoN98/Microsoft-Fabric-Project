@@ -106,8 +106,3 @@ Microsoft-Fabric-Project/
     └── product_catalog/
         └── product_catalog.json
 ```
-    ├── marketing/
-    └── product_catalog/
-```
-
----
