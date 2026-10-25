@@ -17,20 +17,12 @@ Explore the different source systems, their ingestion methods, raw datasets and 
 
 Follow the data journey through the Fabric architecture, from raw ingestion to the final business-ready model.
 
-1. **[Architecture Overview](docs/Architecture/01.%20architecture_overview.md)**  
-   Overall architecture, data flow, Fabric components, and design principles.
-
-2. **[Naming Conventions](docs/Architecture/02.%20naming_conventions.md)**  
-   Naming standards adopted across the Fabric workspace.
-
-3. **[Bronze Layer](docs/Architecture/03.%20bronze_layer.md)**  
-   Raw data ingestion and metadata-driven ingestion process.
-
-4. **[Silver Layer](docs/Architecture/04.%20silver_layer.md)**  
-   Data cleansing, transformation, standardization, and quality checks.
-
-5. **[Gold Layer](docs/Architecture/05.%20gold_layer.md)** 🚧 **Work in Progress**  
-   Business-ready data model, star schema, and analytical layer.
+* [01. Architecture Overview](docs/Architecture/01.%20architecture_overview.md) : Overall architecture, data flow, Fabric components and design principles.
+* [02. Naming Conventions](docs/Architecture/02.%20naming_conventions.md) : Naming standards adopted across the Fabric workspace.
+* [03. Bronze Layer](docs/Architecture/03.%20bronze_layer.md) : Raw data ingestion and metadata-driven ingestion process.
+* [04. Silver Layer](docs/Architecture/04.%20silver_layer.md) : Data cleansing, transformation, standardization and quality checks.
+* [05. Gold Layer](docs/Architecture/05.%20gold_layer.md) : Business-ready data model, star schema, and analytical layer.
+* [06. Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) : End-to-end execution pipeline and data lineage flow.
 
 ```text
 Microsoft-Fabric-Project/
@@ -124,12 +116,7 @@ Welcome to the **GlobalRetail** project repository! This is an end-to-end implem
 ## 🧭 Navigation & Core Documentation
 
 ### 🏛️ Architecture & Guidelines
-* [01. Architecture Overview](docs/Architecture/01.%20architecture_overview.md) — Medallion design, source rationales, component interaction, and design principles.
-* [02. Naming Conventions](docs/Architecture/02.%20naming_conventions.md) — Standardized prefixes, artifact types, schemas, and table naming rules.
-* [03. Bronze Layer](docs/Architecture/03.%20bronze_layer.md) — Ingestion patterns, configuration-driven pipelines, and file-to-Delta conversion.
-* [04. Silver Layer](docs/Architecture/04.%20silver_layer.md) — Data cleaning, nested JSON flattening, quality profiling, and audit logging.
-* [05. Gold Layer](docs/Architecture/05.%20gold_layer.md) — Star schema DWH, SQL data type profiling, stored procedures, and semantic modeling.
-* [06. Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) — End-to-end execution pipeline and data lineage flow.
+
 
 ### 🔌 Data Sources
 * [Azure Data Lake Storage Gen2 (ADLS2)](docs/Data%20Sources/ADLS2/ADLS2_source.md) — CRM & ERP landing zone, shortcut implementation, and file storage rules.
