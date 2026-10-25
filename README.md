@@ -31,7 +31,7 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 
 ## 🛠️ Fabric Workspace Artifacts
 
-Explore the notebooks, dataflows, SQL scripts, and pipelines created within Microsoft Fabric, categorized by Medallion layer:
+Explore the notebooks, dataflows, SQL scripts and pipelines created within Microsoft Fabric, categorized by Medallion layer:
 
 ### Bronze Layer
 - [NB_Bronze_Files_To_Delta.ipynb](fabric_workspace/01.%20bronze_layer/NB_Bronze_Files_To_Delta.ipynb) : Converts landed raw files into Bronze Delta tables.
