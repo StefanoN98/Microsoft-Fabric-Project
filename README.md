@@ -3,7 +3,7 @@
 <img src="docs/Images/architecture/GlobalRetail_Architecture_Low_Level.drawio.svg"/>
 
 
-The repository is organized into different sections to guide you through the solution, from the original data sources to the final analytical model.
+The repository is organized into different sections to guide from the original data sources to the final analytical model.
 
 ## 🔌 Data Sources
 Explore the different source systems, their ingestion methods, raw datasets and associated scripts used in the project.
