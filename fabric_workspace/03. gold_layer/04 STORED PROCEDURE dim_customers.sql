@@ -80,5 +80,5 @@ BEGIN
 END;
 GO
 
--- Per eseguire la stored procedure
+-- Execute stored procedure
 EXEC _Shared_Dim.SP_load_dim_customers;
