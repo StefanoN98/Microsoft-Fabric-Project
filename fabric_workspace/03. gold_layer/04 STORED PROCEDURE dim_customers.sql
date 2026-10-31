@@ -11,7 +11,7 @@ BEGIN
 
         BEGIN TRANSACTION;
 
-        -- Conta le righe disponibili in Silver, prima di toccare Gold
+        -- Count available rows in Silver before to modify Gold
         SELECT @RowsSource = COUNT(*)
         FROM LH_Silver.dbo.silver_customers;
 
