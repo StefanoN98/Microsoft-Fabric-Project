@@ -1,11 +1,9 @@
 # GlobalRetail: End-to-End Data Platform on Microsoft Fabric
 
 ![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-117865?style=flat&logo=microsoft&logoColor=white)
-![Medallion Architecture](https://img.shields.io/badge/Architecture-Medallion-blue)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat&logo=apachespark&logoColor=white)
 ![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-![License](https://img.shields.io/badge/License-see%20LICENSE-lightgrey)
 
 > A production-style **Medallion Architecture** (Bronze → Silver → Gold) built natively on **Microsoft Fabric**. It ingests data from three heterogeneous sources, cleans and models it, and exposes a star schema to **Power BI** through a **Direct Lake** semantic model, all triggered by a single orchestration pipeline.
 
