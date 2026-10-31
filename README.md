@@ -13,7 +13,9 @@
 
 The repository is organized into different sections to guide from the original data sources to the final analytical model.
 
-## 🎯 Project Overview
+---
+
+## 🎯 Project Overview & Key Features
 
 **GlobalRetail** is a simulated retail company whose data lives in three different systems: batch exports from CRM/ERP, an OLTP e-commerce database, and externally distributed files. The goal of this project is to demonstrate how a modern data platform can unify them using only Microsoft Fabric components:
 
@@ -21,10 +23,6 @@ The repository is organized into different sections to guide from the original d
 - **Transform** it through progressive layers of quality and structure
 - **Model** it as a business-ready star schema
 - **Serve** it to Power BI with Direct Lake performance
-
----
-
-## ✨ Key Features
 
 | Feature | Description |
 |---|---|
@@ -37,14 +35,7 @@ The repository is organized into different sections to guide from the original d
 | **Star schema in a Data Warehouse** | Explicit PK/FK constraints, organized into domain-based schemas |
 | **One-click execution** | `PL_ORCHESTRATION` runs ingestion, transformation, loading and semantic model refresh end-to-end |
 
-## 🧰 Tech Stack
-
-- **Storage & compute:** Fabric Lakehouse, Fabric Data Warehouse, OneLake, Delta Lake
-- **Orchestration:** Fabric Data Pipelines
-- **Transformation:** PySpark Notebooks, Dataflow Gen2 (Power Query M), T-SQL Stored Procedures
-- **Connectivity:** On-premises Data Gateway, HTTP connector, OneLake Shortcuts (via Fabric REST API)
-- **Serving & BI:** Direct Lake Semantic Model, Power BI
-- **Sources:** Azure Data Lake Storage Gen2, SQL Server, GitHub
+---
 
 ## 🔌 Data Sources
 Explore the different source systems, their ingestion methods, raw datasets and associated scripts used in the project.
