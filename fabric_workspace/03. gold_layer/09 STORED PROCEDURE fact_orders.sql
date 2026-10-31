@@ -11,17 +11,15 @@ BEGIN
 
         BEGIN TRANSACTION;
 
-        -- 1. Leggi la data più recente già presente in _Transactions
+        -- 1. Read newest date already present in in _Transactions
         SELECT @LastWatermark = MAX(OrderDate)
         FROM _Transactions.fact_orders;
 
-        -- 2. Se la tabella è vuota (primo giro), forziamo una data sentinella molto vecchia
+        -- 2. If the table is empty (firt round) force with a sentinel old date
         IF @LastWatermark IS NULL
             SET @LastWatermark = '1900-01-01';
 
-        -- 3. Inserisci gli ordini con data >= watermark (non > , per non perdere righe
-        --    con la stessa data del giorno già processato), escludendo però quelli
-        --    che sono già presenti in _Transactions, identificati tramite OrderID (chiave univoca)
+        -- 3. Insert orders with date >= watermark excluding dates already present in in _Transactions, identified byOrderID (PK)
         INSERT INTO _Transactions.fact_orders
         (
             OrderID,
