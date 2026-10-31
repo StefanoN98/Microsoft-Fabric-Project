@@ -1,6 +1,6 @@
 
 -- =====================================================================================
--- FASE 1: DROP all Foreign Key (nno dependences)
+-- FASE 1: DROP all Foreign Key (no dependences)
 -- =====================================================================================
 
 ALTER TABLE [_Shared_Dim].[dim_products] DROP CONSTRAINT IF EXISTS FK_dim_products_dim_suppliers;
