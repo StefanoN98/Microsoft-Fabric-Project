@@ -1,5 +1,5 @@
 
--- Verifica Primary Key definite sulle tabelle dello schema _Marketing
+-- Verify Primary Keys defined for the tables on schema _Marketing
 SELECT 
     s.name AS SchemaName,
     t.name AS TableName,
@@ -17,7 +17,7 @@ INNER JOIN sys.schemas s
     ON t.schema_id = s.schema_id
 WHERE i.is_primary_key = 1;
 
--- Verifica Foreign Key definite
+-- Verificy defined Foreign Keys
 SELECT 
     fk.name AS ForeignKeyName,
     OBJECT_NAME(fk.parent_object_id) AS TabellaFiglia,
