@@ -2,9 +2,9 @@
 
 ![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-117865?style=flat&logo=microsoft&logoColor=white)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat&logo=apachespark&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
 > A production-style **Medallion Architecture** (Bronze → Silver → Gold) built natively on **Microsoft Fabric**. It ingests data from three heterogeneous sources, cleans and models it and exposes a star schema to **Power BI** through a **Direct Lake** semantic model, all triggered by a single orchestration pipeline.
