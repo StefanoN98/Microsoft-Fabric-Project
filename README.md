@@ -9,7 +9,9 @@
 
 > A production-style **Medallion Architecture** (Bronze → Silver → Gold) built natively on **Microsoft Fabric**. It ingests data from three heterogeneous sources, cleans and models it, and exposes a star schema to **Power BI** through a **Direct Lake** semantic model, all triggered by a single orchestration pipeline.
 
-<img src="docs/Images/architecture/GlobalRetail_Architecture_Low_Level.drawio.svg"/>
+<img src="docs/Images/architecture/GlobalRetail_Architecture_high_level.svg"/>
+
+Here to see the detailed architecture schema: [Detailed Architecture](docs/Images/architecture/GlobalRetail_Architecture_Low_Level.drawio.svg)
 
 ---
 
