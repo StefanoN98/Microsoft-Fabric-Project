@@ -11,7 +11,7 @@ BEGIN
 
         BEGIN TRANSACTION;
 
-        -- 1. Read newest date already present in in _Transactions
+        -- 1. Read newest date already present in _Transactions
         SELECT @LastWatermark = MAX(OrderDate)
         FROM _Transactions.fact_orders;
 
