@@ -1,5 +1,5 @@
 
--- Verifica dettagliata delle Foreign Key: tabelle, colonne e stato del vincolo
+-- Verificy Foreign Keys: tables, columns and constraint status
 SELECT 
     s_parent.name              AS SchemaTabellaFiglia,
     OBJECT_NAME(fk.parent_object_id)      AS TabellaFiglia,
@@ -9,7 +9,7 @@ SELECT
     c_ref.name                 AS ColonnaGenitore,
     fk.name                    AS NomeVincoloFK,
     fk.is_disabled             AS Disabilitato,
-    fk.is_not_trusted          AS NonTrusted  -- se 1, il motore non garantisce la validità dei dati esistenti
+    fk.is_not_trusted          AS NonTrusted  
 FROM sys.foreign_keys fk
 INNER JOIN sys.foreign_key_columns fkc 
     ON fk.object_id = fkc.constraint_object_id
