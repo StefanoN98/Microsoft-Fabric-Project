@@ -1,6 +1,6 @@
 
 -- =====================================================================================
--- FASE 1: DROP di TUTTE le Foreign Key (nessuna dipendenza da rispettare qui)
+-- FASE 1: DROP all Foreign Key (nno dependences)
 -- =====================================================================================
 
 ALTER TABLE [_Shared_Dim].[dim_products] DROP CONSTRAINT IF EXISTS FK_dim_products_dim_suppliers;
@@ -29,7 +29,7 @@ ALTER TABLE [_Marketing].[fact_reviews] DROP CONSTRAINT IF EXISTS FK_fact_review
 GO
 
 -- =====================================================================================
--- FASE 2: DROP di TUTTE le Primary Key (ora nessuna FK le referenzia più)
+-- FASE 2: DROP all Primary Key (now no FK to reference)
 -- =====================================================================================
 
 ALTER TABLE [_Shared_Dim].[dim_customers] DROP CONSTRAINT IF EXISTS PK_dim_customers;
@@ -56,7 +56,7 @@ ALTER TABLE [_Marketing].[fact_reviews] DROP CONSTRAINT IF EXISTS PK_fact_review
 GO
 
 -- =====================================================================================
--- FASE 3: CREATE di TUTTE le Primary Key (devono esistere prima delle FK)
+-- FASE 3: Create all Primary keys (before to create Foreign Keys)
 -- =====================================================================================
 -- PRIMARY KEY _Shared_Dim
 ALTER TABLE [_Shared_Dim].[dim_customers]
@@ -110,8 +110,7 @@ ADD CONSTRAINT PK_fact_reviews PRIMARY KEY NONCLUSTERED (ReviewID) NOT ENFORCED;
 GO
 
 -- =====================================================================================
--- FASE 4: CREATE di TUTTE le Foreign Key
--- ⚠ CORREZIONE CASE-SENSITIVE: product_id (minuscolo) invece di ProductID
+-- FASE 4: Create all Foreign Key
 -- =====================================================================================
 
 ALTER TABLE [_Shared_Dim].[dim_products]
@@ -126,7 +125,6 @@ FOREIGN KEY (CustomerID) REFERENCES [_Shared_Dim].[dim_customers] (CustomerID)
 NOT ENFORCED;
 GO
 
--- ⚠ Verifica prima che questa tabella esista con questo nome esatto (vedi query di verifica sopra)
 ALTER TABLE [_Transactions].[fact_orders_details]
 ADD CONSTRAINT FK_fact_orders_details_fact_orders
 FOREIGN KEY (OrderID) REFERENCES [_Transactions].[fact_orders] (OrderID)
@@ -135,13 +133,13 @@ GO
 
 ALTER TABLE [_Transactions].[fact_orders_details]
 ADD CONSTRAINT FK_fact_orders_details_dim_products
-FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   -- CORRETTO: product_id minuscolo
+FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   
 NOT ENFORCED;
 GO
 
 ALTER TABLE [_Supply_Chain].[fact_inventory]
 ADD CONSTRAINT FK_fact_inventory_dim_products
-FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   -- CORRETTO
+FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   
 NOT ENFORCED;
 GO
 
@@ -165,7 +163,7 @@ GO
 
 ALTER TABLE [_Marketing].[fact_web_logs]
 ADD CONSTRAINT FK_fact_web_logs_dim_products
-FOREIGN KEY (product_id) REFERENCES [_Shared_Dim].[dim_products] (product_id)   -- CORRETTO
+FOREIGN KEY (product_id) REFERENCES [_Shared_Dim].[dim_products] (product_id)  
 NOT ENFORCED;
 GO
 
@@ -177,7 +175,7 @@ GO
 
 ALTER TABLE [_Marketing].[fact_reviews]
 ADD CONSTRAINT FK_fact_reviews_dim_products
-FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   -- CORRETTO
+FOREIGN KEY (ProductID) REFERENCES [_Shared_Dim].[dim_products] (product_id)   
 NOT ENFORCED;
 GO
 
