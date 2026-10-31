@@ -24,8 +24,8 @@ BEGIN
             FROM E8
         ),
         NumbersFiltered AS (
-            -- Filtro PRIMA di calcolare qualunque data:
-            -- tiene solo i numeri necessari a coprire l'intervallo richiesto
+            -- Filter before to calculate any dates
+            -- keeping only necessary numbers to cover the requested interval
             SELECT Number
             FROM Numbers
             WHERE Number <= DATEDIFF(DAY, @StartDate, @EndDate)
