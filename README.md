@@ -5,7 +5,7 @@
 ![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
-> A production-style **Medallion Architecture** (Bronze → Silver → Gold) built natively on **Microsoft Fabric**. It ingests data from three heterogeneous sources, cleans and models it, and exposes a star schema to **Power BI** through a **Direct Lake** semantic model, all triggered by a single orchestration pipeline.
+> A production-style **Medallion Architecture** (Bronze → Silver → Gold) built natively on **Microsoft Fabric**. It ingests data from three heterogeneous sources, cleans and models it and exposes a star schema to **Power BI** through a **Direct Lake** semantic model, all triggered by a single orchestration pipeline.
 
 <img src="docs/Images/architecture/GlobalRetail_Architecture_high_level.svg"/>
 
@@ -15,7 +15,7 @@ Here to see the detailed architecture schema: [Detailed Architecture](docs/Image
 
 ## 🎯 Project Overview & Key Features
 
-**GlobalRetail** is a simulated retail company whose data lives in three different systems: batch exports from CRM/ERP, an OLTP e-commerce database, and externally distributed files. The goal of this project is to demonstrate how a modern data platform can unify them using only Microsoft Fabric components:
+**GlobalRetail** is a simulated retail company whose data lives in three different systems: batch exports from CRM/ERP, an OLTP e-commerce database and externally distributed files. The goal of this project is to demonstrate how a modern data platform can unify them using only Microsoft Fabric components:
 
 - **Ingest** raw data from heterogeneous sources, driven by metadata
 - **Transform** it through progressive layers of quality and structure
