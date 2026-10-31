@@ -74,12 +74,14 @@ Follow the data journey through the Fabric architecture, from raw ingestion to t
 Explore the notebooks, dataflows, SQL scripts and pipelines created within Microsoft Fabric, categorized by Medallion layer:
 
 ### Bronze Layer
+Raw data ingested **as-is** from all three sources and stored as Delta tables in `LH_Bronze`. No transformation is applied: the layer exists for traceability and reprocessing. Ingestion is metadata-driven (`PL_INGEST`).
 - [NB_Bronze_Files_To_Delta.ipynb](fabric_workspace/01.%20bronze_layer/NB_Bronze_Files_To_Delta.ipynb) : Converts landed raw files into Bronze Delta tables.
 - [NB_Bronze_Shortcut.ipynb](fabric_workspace/01.%20bronze_layer/NB_Bronze_Shortcut.ipynb) : Programmatically creates OneLake Shortcuts via Fabric REST API.
 - [NB_load_web_logs.ipynb](fabric_workspace/01.%20bronze_layer/NB_load_web_logs.ipynb) : Downloads large Git LFS `web_logs.json` file directly to Lakehouse `Files/`.
 - [PL_INGEST.json](fabric_workspace/01.%20bronze_layer/PL_INGEST.json) : Metadata-driven ingestion pipeline configuration.
 
 ### Silver Layer
+Cleaned, deduplicated and standardized data in `LH_Silver`
 - [Dataflow_crm_from_bronze_to_silver.pq](fabric_workspace/02.%20silver_layer/Dataflow_crm_from_bronze_to_silver.pq) : Power Query M script for cleansing CRM datasets.
 - [NB_Silver_Analyze_Load_erp_tables.ipynb](fabric_workspace/02.%20silver_layer/NB_Silver_Analyze_Load_erp_tables.ipynb) : Cleans, profiles data quality, and loads ERP tables into Delta format.
 - [NB_Silver_Analyze_Load_sales_tables.ipynb](fabric_workspace/02.%20silver_layer/NB_Silver_Analyze_Load_sales_tables.ipynb) : Standardizes and loads SQL Server-sourced tables.
@@ -87,6 +89,7 @@ Explore the notebooks, dataflows, SQL scripts and pipelines created within Micro
 - [Silver_Pipeline.json](fabric_workspace/02.%20silver_layer/Silver_Pipeline.json) : Ingestion orchestrator for Silver transformation tasks.
 
 ### Gold Layer
+A **star schema** in the `WH_Retail` Data Warehouse with explicit primary/foreign keys, organized by business domain
 - [01 Create Schemas.sql](fabric_workspace/03.%20gold_layer/01%20Create%20Schemas.sql) : Generates domain-based Data Warehouse schemas.
 - [02 Create Tables.sql](fabric_workspace/03.%20gold_layer/02%20Create%20Tables.sql) : DDL script to create dimension and fact tables in `WH_Retail`.
 - [03 Add PK & FK constraints.sql](fabric_workspace/03.%20gold_layer/03%20Add%20PK%20%26%20FK%20constraints.sql) — Applies primary key and foreign key integrity constraints.
@@ -182,38 +185,6 @@ Microsoft-Fabric-Project/
 ```
 
 
----
-
-## 🥉🥈🥇 Medallion Layers at a Glance
-
-### 🥉 Bronze: raw data
-Raw data ingested **as-is** from all three sources and stored as Delta tables in `LH_Bronze`. No transformation is applied: the layer exists for traceability and reprocessing. Ingestion is metadata-driven (`PL_INGEST`).
-
-### 🥈 Silver: clean data
-Cleaned, deduplicated and standardized data in `LH_Silver`, using the best engine for each domain:
-
-| Domain | Tables | Engine |
-|---|---|---|
-| ERP | `silver_products`, `silver_suppliers`, `silver_inventory` | PySpark Notebook (profiling + cleaning) |
-| Sales (SQL Server) | `silver_orders`, `silver_order_details`, `silver_reviews`, `silver_order_campaign` | PySpark Notebook |
-| Product Catalog | `silver_product_catalog` | PySpark Notebook (flattens nested `attributes` and explodes `images`) |
-| CRM | `silver_customers`, `silver_legacy_customers` | Dataflow Gen2 |
-| Marketing & E-commerce | `silver_marketing_campaigns`, `silver_web_logs` | Parameterized Copy Activity |
-| Audit | `silver_audit_log` | Shared Delta table (append mode) |
-
-### 🥇 Gold: business model
-A **star schema** in the `WH_Retail` Data Warehouse with explicit primary/foreign keys, organized by business domain:
-
-| Schema | Tables |
-|---|---|
-| `_Shared_Dim` | `dim_customers`, `dim_products`, `dim_date` |
-| `_Transactions` | `fact_orders`, `fact_orders_details` |
-| `_Supply_Chain` | `fact_inventory`, `dim_suppliers` |
-| `_Marketing` | `dim_campaign`, `fact_order_campaign`, `fact_web_logs`, `fact_reviews` |
-
-Dimensions are loaded with `TRUNCATE` + `INSERT`; facts use a **watermark pattern** for incremental loading. The model is exposed to Power BI through the Direct Lake semantic model `SM_GlobalRetail`.
-
----
 
 ## 📐 Design Principles
 
@@ -323,15 +294,6 @@ Microsoft-Fabric-Project/
 3. **Create the Fabric items** (`LH_Bronze`, `LH_Silver`, `WH_Retail`) following the [naming conventions](docs/Architecture/02.%20naming_conventions.md), then import the notebooks, dataflow, pipelines and SQL scripts from [`fabric_workspace/`](fabric_workspace).
 4. **Run `PL_ORCHESTRATION`** to execute ingestion, transformation, Gold loading and semantic model refresh in a single run.
 5. **Connect Power BI** to `SM_GlobalRetail` and start building reports.
-
----
-
-## 👤 Author
-
-**Stefano N.**
-[GitHub](https://github.com/StefanoN98)
-
-Feedback, issues and suggestions are welcome. Feel free to open an issue or reach out.
 
 ---
 
