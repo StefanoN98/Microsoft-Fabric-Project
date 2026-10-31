@@ -14,7 +14,17 @@
 Here to see the detailed architecture schema: [Detailed Architecture](docs/Images/architecture/GlobalRetail_Architecture_Low_Level.drawio.svg)
 
 ---
+## 📑 Quick Index
+<p align="left">
+  <a href="#-project-overview--key-features">Overview</a> •
+  <a href="#-data-sources">Data Sources</a> •
+  <a href="#%EF%B8%8F-architecture--data-layers">Architecture</a> •
+  <a href="#%EF%B8%8F-fabric-workspace-artifacts">Artifacts</a> •
+  <a href="#-repository-structure">Repo Structure</a> •
+  <a href="#-getting-started">Getting Started</a>
+</p>
 
+---
 ## 🎯 Project Overview & Key Features
 
 **GlobalRetail** is a simulated retail company whose data lives in three different systems: batch exports from CRM/ERP, an OLTP e-commerce database and externally distributed files. The goal of this project is to demonstrate how a modern data platform can unify them using only Microsoft Fabric components:
