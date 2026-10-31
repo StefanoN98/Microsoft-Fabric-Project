@@ -11,8 +11,6 @@
 
 <img src="docs/Images/architecture/GlobalRetail_Architecture_Low_Level.drawio.svg"/>
 
-The repository is organized into different sections to guide from the original data sources to the final analytical model.
-
 ---
 
 ## 🎯 Project Overview & Key Features
@@ -51,13 +49,14 @@ Explore the different source systems, their ingestion methods, raw datasets and 
 
 Follow the data journey through the Fabric architecture, from raw ingestion to the final business-ready model.
 
-* [01. Architecture Overview](docs/Architecture/01.%20architecture_overview.md) : Overall architecture, data flow, Fabric components and design principles.
-* [02. Naming Conventions](docs/Architecture/02.%20naming_conventions.md) : Naming standards adopted across the Fabric workspace.
-* [03. Bronze Layer](docs/Architecture/03.%20bronze_layer.md) : Raw data ingestion and metadata-driven ingestion process.
-* [04. Silver Layer](docs/Architecture/04.%20silver_layer.md) : Data cleansing, transformation, standardization and quality checks.
-* [05. Gold Layer](docs/Architecture/05.%20gold_layer.md) : Business-ready data model, star schema, and analytical layer.
-* [06. Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) : End-to-end execution pipeline and data lineage flow.
-
+| # | Document | Content |
+|---|---|---|
+| 01 | [Architecture Overview](docs/Architecture/01.%20architecture_overview.md) | Overall architecture, data flow, Fabric components and design principles |
+| 02 | [Naming Conventions](docs/Architecture/02.%20naming_conventions.md) | Naming standards adopted across the Fabric workspace |
+| 03 | [Bronze Layer](docs/Architecture/03.%20bronze_layer.md) | Raw data ingestion and the metadata-driven process |
+| 04 | [Silver Layer](docs/Architecture/04.%20silver_layer.md) | Cleansing, transformation, standardization and quality checks |
+| 05 | [Gold Layer](docs/Architecture/05.%20gold_layer.md) | Star schema, business model and analytical layer |
+| 06 | [Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) | End-to-end execution pipeline and data lineage |
 ---
 
 ## 🛠️ Fabric Workspace Artifacts
@@ -200,21 +199,6 @@ PL_INGEST  ──▶  PL_SILVER  ──▶  PL_GOLD  ──▶  Semantic Model r
 ```
 
 Triggering it takes raw source data all the way to a refreshed, reportable semantic model with no manual intervention. See [Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) for pipeline screenshots and the end-to-end lineage view.
-
----
-
-## 📚 Documentation
-
-Follow the data journey from raw ingestion to the final business-ready model:
-
-| # | Document | Content |
-|---|---|---|
-| 01 | [Architecture Overview](docs/Architecture/01.%20architecture_overview.md) | Overall architecture, data flow, Fabric components and design principles |
-| 02 | [Naming Conventions](docs/Architecture/02.%20naming_conventions.md) | Naming standards adopted across the Fabric workspace |
-| 03 | [Bronze Layer](docs/Architecture/03.%20bronze_layer.md) | Raw data ingestion and the metadata-driven process |
-| 04 | [Silver Layer](docs/Architecture/04.%20silver_layer.md) | Cleansing, transformation, standardization and quality checks |
-| 05 | [Gold Layer](docs/Architecture/05.%20gold_layer.md) | Star schema, business model and analytical layer |
-| 06 | [Orchestration & Lineage](docs/Architecture/06.%20orchestration%20&%20lineage.md) | End-to-end execution pipeline and data lineage |
 
 ---
 
