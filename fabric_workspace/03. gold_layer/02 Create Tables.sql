@@ -54,11 +54,11 @@ DROP TABLE IF EXISTS [_Shared_Dim].[dim_date];
 GO
 
 CREATE TABLE [_Shared_Dim].[dim_date] (
-    [DateKey]           INT             NOT NULL,   -- PK formato YYYYMMDD, ottimale per join veloci
+    [DateKey]           INT             NOT NULL,   -- PK format YYYYMMDD
     [FullDate]          DATE            NOT NULL,
     [Day]               SMALLINT        NOT NULL,
     [DayName]           VARCHAR(10)     NOT NULL,
-    [DayOfWeek]         SMALLINT        NOT NULL,   -- 1 = Domenica ... 7 = Sabato (standard T-SQL)
+    [DayOfWeek]         SMALLINT        NOT NULL,   
     [DayOfYear]         SMALLINT        NOT NULL,
     [Week]              SMALLINT        NOT NULL,
     [Month]             SMALLINT        NOT NULL,
@@ -67,8 +67,8 @@ CREATE TABLE [_Shared_Dim].[dim_date] (
     [Year]              SMALLINT        NOT NULL,
     [IsWeekend]         BIT             NOT NULL,
     [IsLastDayOfMonth]  BIT             NOT NULL,
-    [YearMonth]         INT             NOT NULL,   -- formato YYYYMM, utile per aggregazioni mensili
-    [YearQuarter]       VARCHAR(7)      NOT NULL    -- formato 'YYYY-Q1'
+    [YearMonth]         INT             NOT NULL,   -- format YYYYMM
+    [YearQuarter]       VARCHAR(7)      NOT NULL    -- format 'YYYY-Q1'
 );
 GO
 
@@ -117,9 +117,9 @@ DROP TABLE IF EXISTS [_Supply_Chain].[fact_inventory];
 GO
 
 CREATE TABLE [_Supply_Chain].[fact_inventory] (
-    [WarehouseID]        VARCHAR(10)     NOT NULL,   -- PK composta (1/2)
+    [WarehouseID]        VARCHAR(10)     NOT NULL,   -- PK composite (1/2)
     [WarehouseCity]      VARCHAR(13)     NOT NULL,
-    [ProductID]          VARCHAR(10)     NOT NULL,   -- PK composta (2/2) + FK -> dim_products
+    [ProductID]          VARCHAR(10)     NOT NULL,   -- PK composite (2/2) + FK -> dim_products
     [StockQuantity]      INT             NOT NULL,
     [ReservedQuantity]   INT             NOT NULL,
     [AvailableQuantity]  INT             NOT NULL,
@@ -167,8 +167,8 @@ DROP TABLE IF EXISTS [_Marketing].[fact_order_campaign];
 GO
 
 CREATE TABLE [_Marketing].[fact_order_campaign] (
-    [OrderID]            VARCHAR(10)     NOT NULL,   -- PK composta (1/2) + FK -> fact_orders
-    [CampaignID]         VARCHAR(10)     NOT NULL,   -- PK composta (2/2) + FK -> dim_campaign
+    [OrderID]            VARCHAR(10)     NOT NULL,   -- PK composite (1/2) + FK -> fact_orders
+    [CampaignID]         VARCHAR(10)     NOT NULL,   -- PK composite (2/2) + FK -> dim_campaign
     [AttributionModel]   VARCHAR(13)     NOT NULL,
     [ConversionDays]     INT             NOT NULL,
     [CampaignChannel]    VARCHAR(10)     NOT NULL
@@ -188,10 +188,10 @@ CREATE TABLE [_Marketing].[fact_web_logs] (
     [browser]            VARCHAR(10)     NOT NULL,
     [country]            VARCHAR(16)     NOT NULL,
     [device]             VARCHAR(10)     NOT NULL,
-    [duration]           INT             NOT NULL,   -- corretto da BIGINT
+    [duration]           INT             NOT NULL,   
     [event]              VARCHAR(13)     NOT NULL,
     [page]               VARCHAR(18)     NOT NULL,
-    [timestamp]          DATETIME2(6)    NOT NULL    -- corretto da VARCHAR(22)
+    [timestamp]          DATETIME2(6)    NOT NULL    
 );
 GO
 
@@ -206,8 +206,8 @@ CREATE TABLE [_Marketing].[fact_reviews] (
     [ProductID]          VARCHAR(10)     NOT NULL,
     [OrderID]            VARCHAR(10)     NULL,
     [Rating]             INT             NOT NULL,
-    [ReviewTitle]        VARCHAR(50)     NULL,        -- ampliato leggermente per sicurezza
-    [ReviewText]         VARCHAR(200)   NULL,         -- corretto: testo libero recensione
+    [ReviewTitle]        VARCHAR(50)     NULL,        -- wider to reduce lenght issues
+    [ReviewText]         VARCHAR(200)   NULL,         
     [ReviewDate]         DATETIME2(6)    NOT NULL,
     [VerifiedPurchase]   BIT             NOT NULL,
     [HelpfulVotes]       INT             NOT NULL
