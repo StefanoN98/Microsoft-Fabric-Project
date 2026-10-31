@@ -10,10 +10,8 @@ BEGIN
 
         BEGIN TRANSACTION;
 
-        -- Inserisci solo le righe la cui combinazione ordersID + ordersDetailID
-        -- non è già presente in Gold. Nessun filtro su data: il confronto
-        -- avviene sempre sull'intera tabella sorgente.
-        
+        -- Insert only rows where the combination between ordersID + ordersDetailID is not already present in Gold.
+        -- No filter on the date: the comparison happens always on the entire source table        
 
         INSERT INTO _Transactions.fact_orders_details
         (
